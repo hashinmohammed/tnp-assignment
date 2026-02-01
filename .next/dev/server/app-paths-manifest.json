@@ -1,9 +1,3 @@
 {
-  "/model3/page": "app/model3/page.js",
-  "/models/page": "app/models/page.js",
-  "/modelx/page": "app/modelx/page.js",
-  "/modely/page": "app/modely/page.js",
-  "/page": "app/page.js",
-  "/solarpanel/page": "app/solarpanel/page.js",
-  "/solarroof/page": "app/solarroof/page.js"
+  "/page": "app/page.js"
 }
