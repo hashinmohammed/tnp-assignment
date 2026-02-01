@@ -1,0 +1,102 @@
+/* [project]/styles/components.module.css [app-client] (css) */
+.components-module__8llB-a__font {
+  width: 120px;
+}
+
+.components-module__8llB-a__list:hover {
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  background-color: #383f4d1a;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.components-module__8llB-a__bannerheading {
+  text-align: center;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.components-module__8llB-a__bannerdescription {
+  text-align: center;
+  font-weight: 500;
+  overflow: hidden;
+  transform: translate(-50%, -20%);
+}
+
+.components-module__8llB-a__bannerpagedescription {
+  text-align: center;
+  font-weight: 500;
+  overflow: hidden;
+  transform: translate(-50%, -15%);
+}
+
+.components-module__8llB-a__bannerbutton {
+  text-align: center;
+  font-weight: 500;
+  overflow: hidden;
+  transform: translate(-50%, -80%);
+}
+
+.components-module__8llB-a__demo {
+  border-bottom: 1px solid #000;
+}
+
+.components-module__8llB-a__demo:hover {
+  border-bottom: 2px solid #000;
+  transition: all .2s;
+}
+
+.components-module__8llB-a__hero {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.components-module__8llB-a__banner {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.components-module__8llB-a__herobutton1 {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: #171a20cc;
+}
+
+.components-module__8llB-a__herobutton2 {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: #f4f4f4a6;
+}
+
+.components-module__8llB-a__sidemenu {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #ffffff80;
+}
+
+.components-module__8llB-a__close {
+  border: 1px solid #000;
+  transition: all 1s;
+}
+
+@media (max-width: 1200px) {
+  .components-module__8llB-a__menu {
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    background-color: #171a201a;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 480px) {
+  .components-module__8llB-a__menu {
+    font-weight: 500;
+  }
+
+  .components-module__8llB-a__ordernow {
+    top: 70%;
+  }
+}
+
+/*# sourceMappingURL=styles_components_module_css_bad6b30c._.single.css.map*/
