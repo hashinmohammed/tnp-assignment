@@ -1,1 +1,430 @@
 [00:00:03.505] Server  LOG     ✓ Ready in 3.3s
+[00:06:02.156] Server  LOG     ✓ Compiled in 1806ms
+[00:06:29.729] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:08:35.456] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/models" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <div className="overflow-y...">
+                                <Banner>
+                                <motion.div>
+                                <Photo>
+                                <Video>
+                                  <div className="w-[100vw] ...">
+                                    <div className={" h-auto"}>
+                                      <div className="w-[90vw] m...">
+                                        <video
+                                          className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflo..."
+                                          onEnded={function onEnded}
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/Cinematic-Experience.mp4"
+                                          alt=""
+-                                         data-video="0"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                                  <motion.div variants={{...}} className="flex items...">
+                                    <div className="flex items..." style={{opacity:0, ...}} ...>
+                                      <video
+                                        className="max-w-[500px] mb-4 md:mr-[50px]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/Immersive-sound.mp4"
+                                        alt="stay-connected-image"
+-                                       data-video="1"
+                                      >
+                                      ...
+                                <Carinfobanner>
+                                <Beyond>
+                                <Electricpowertrain>
+                                <Carinfobanner>
+                                <Beyond>
+                                <Carinfo>
+                                <Infovideo url="/models/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                                  <div className="flex bg-wh...">
+                                    <div className="relative">
+                                      <video
+                                        className="w-[100%]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/models-range.mp4"
+                                        alt="range-video"
+-                                       data-video="2"
+                                      >
+                                    ...
+                                <Beyond>
+                                <Features url1="/models/mo..." Featureheading="Features" ...>
+                                  <div className="bg-white p...">
+                                    <div>
+                                    <div>
+                                      <div className="max-w-[90v...">
+                                        <video
+                                          className="object-contain w-[100%] h-[100%]"
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/navigate-on-autopilot.mp4"
+                                          onEnded={function onEnded}
+                                          alt="model-s-battery"
+-                                         data-video="3"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                  ...
+
+[00:09:11.405] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/models" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <div className="overflow-y...">
+                                <Banner>
+                                <motion.div>
+                                <Photo>
+                                <Video>
+                                  <div className="w-[100vw] ...">
+                                    <div className={" h-auto"}>
+                                      <div className="w-[90vw] m...">
+                                        <video
+                                          className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflo..."
+                                          onEnded={function onEnded}
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/Cinematic-Experience.mp4"
+                                          alt=""
+-                                         data-video="0"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                                  <motion.div variants={{...}} className="flex items...">
+                                    <div className="flex items..." style={{opacity:0, ...}} ...>
+                                      <video
+                                        className="max-w-[500px] mb-4 md:mr-[50px]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/Immersive-sound.mp4"
+                                        alt="stay-connected-image"
+-                                       data-video="1"
+                                      >
+                                      ...
+                                <Carinfobanner>
+                                <Beyond>
+                                <Electricpowertrain>
+                                <Carinfobanner>
+                                <Beyond>
+                                <Carinfo>
+                                <Infovideo url="/models/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                                  <div className="flex bg-wh...">
+                                    <div className="relative">
+                                      <video
+                                        className="w-[100%]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/models-range.mp4"
+                                        alt="range-video"
+-                                       data-video="2"
+                                      >
+                                    ...
+                                <Beyond>
+                                <Features url1="/models/mo..." Featureheading="Features" ...>
+                                  <div className="bg-white p...">
+                                    <div>
+                                    <div>
+                                      <div className="max-w-[90v...">
+                                        <video
+                                          className="object-contain w-[100%] h-[100%]"
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/navigate-on-autopilot.mp4"
+                                          onEnded={function onEnded}
+                                          alt="model-s-battery"
+-                                         data-video="3"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                  ...
+
+[00:10:10.585] Server  LOG     ✓ Compiled in 577ms
+[00:11:06.957] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/models" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <div className="overflow-y...">
+                                <Banner>
+                                <motion.div>
+                                <Photo>
+                                <Video>
+                                  <div className="w-[100vw] ...">
+                                    <div className={" h-auto"}>
+                                      <div className="w-[90vw] m...">
+                                        <video
+                                          className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflo..."
+                                          onEnded={function onEnded}
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/Cinematic-Experience.mp4"
+                                          alt=""
+-                                         data-video="0"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                                  <motion.div variants={{...}} className="flex items...">
+                                    <div className="flex items..." style={{opacity:0, ...}} ...>
+                                      <video
+                                        className="max-w-[500px] mb-4 md:mr-[50px]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/Immersive-sound.mp4"
+                                        alt="stay-connected-image"
+-                                       data-video="1"
+                                      >
+                                      ...
+                                <Carinfobanner>
+                                <Beyond>
+                                <Electricpowertrain>
+                                <Carinfobanner>
+                                <Beyond>
+                                <Carinfo>
+                                <Infovideo url="/models/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                                  <div className="flex bg-wh...">
+                                    <div className="relative">
+                                      <video
+                                        className="w-[100%]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/models-range.mp4"
+                                        alt="range-video"
+-                                       data-video="2"
+                                      >
+                                    ...
+                                <Beyond>
+                                <Features url1="/models/mo..." Featureheading="Features" ...>
+                                  <div className="bg-white p...">
+                                    <div>
+                                    <div>
+                                      <div className="max-w-[90v...">
+                                        <video
+                                          className="object-contain w-[100%] h-[100%]"
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/navigate-on-autopilot.mp4"
+                                          onEnded={function onEnded}
+                                          alt="model-s-battery"
+-                                         data-video="3"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                  ...
+
+[00:11:46.805] Server  LOG     ○ Compiling /modelx ...
+[00:11:49.817] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="modelx/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/modelx" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="modelx/pag...">
+                  <SegmentTrieNode>
+                  <Page>
+                    <ModelXClient>
+                      <div className="overflow-y...">
+                        <Banner>
+                        <motion.div>
+                        <Photo>
+                        <Video>
+                          <div className="w-[100vw] ...">
+                            <div className={" h-auto"}>
+                              <div className="w-[90vw] m...">
+                                <video
+                                  className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflow-hidden..."
+                                  onEnded={function onEnded}
+                                  autoPlay={true}
+                                  muted={true}
+                                  src="/models/Cinematic-Experience.mp4"
+                                  alt=""
+-                                 data-video="0"
+                                >
+                              ...
+                            ...
+                        <Carinfo>
+                        <Carinfobanner>
+                        <Beyond>
+                        <Electricpowertrain>
+                        <Infovideo>
+                        <Carinfobanner>
+                        <Beyond>
+                        <Carinfo>
+                        <Infovideo>
+                        <Beyond>
+                        <Features url1="/models/mo..." Featureheading="Features" Featuredescription="Enhanced A..." ...>
+                          <div className="bg-white p...">
+                            <div>
+                            <div>
+                              <div className="max-w-[90v...">
+                                <video
+                                  className="object-contain w-[100%] h-[100%]"
+                                  autoPlay={true}
+                                  muted={true}
+                                  src="/models/navigate-on-autopilot.mp4"
+                                  onEnded={function onEnded}
+                                  alt="model-s-battery"
+-                                 data-video="1"
+                                >
+                              ...
+                            ...
+                        ...
+                ...
+              ...
+

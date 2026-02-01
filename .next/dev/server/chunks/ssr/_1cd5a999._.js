@@ -63,7 +63,7 @@ const navVariants = {
         opacity: 0,
         y: -50,
         transition: {
-            type: 'spring',
+            type: "spring",
             stiffness: 300,
             damping: 140
         }
@@ -72,25 +72,25 @@ const navVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            type: 'spring',
+            type: "spring",
             stiffness: 80,
-            delay: 1
+            delay: 0.05
         }
     }
 };
 const slideIn = (direction, type, delay, duration)=>({
         hidden: {
-            x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-            y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0
+            x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+            y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0
         },
         show: {
             x: 0,
             y: 0,
             transition: {
                 type,
-                delay,
-                duration,
-                ease: 'easeOut'
+                delay: delay * 0.1,
+                duration: duration ? duration * 0.5 : 0.3,
+                ease: "easeOut"
             }
         }
     });
@@ -98,8 +98,8 @@ const staggerContainer = (staggerChildren, delayChildren)=>({
         hidden: {},
         show: {
             transition: {
-                staggerChildren,
-                delayChildren
+                staggerChildren: staggerChildren ? staggerChildren * 0.5 : 0.05,
+                delayChildren: delayChildren ? delayChildren * 0.1 : 0
             }
         }
     });
@@ -112,8 +112,8 @@ const textVariant = (delay)=>({
             y: 0,
             opacity: 1,
             transition: {
-                duration: .60,
-                delay
+                duration: 0.3,
+                delay: delay * 0.1
             }
         }
     });
@@ -126,8 +126,8 @@ const buttonVariant = (delay)=>({
             x: 0,
             opacity: 1,
             transition: {
-                duration: .60,
-                delay
+                duration: 0.3,
+                delay: delay * 0.1
             }
         }
     });
@@ -140,8 +140,8 @@ const buttonrightVariant = (delay)=>({
             x: 0,
             opacity: 1,
             transition: {
-                duration: .60,
-                delay
+                duration: 0.3,
+                delay: delay * 0.1
             }
         }
     });
@@ -152,8 +152,8 @@ const textContainer = {
     show: (i = 1)=>({
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
-                delayChildren: i * 0.1
+                staggerChildren: 0.05,
+                delayChildren: i * 0.05
             }
         })
 };
@@ -166,15 +166,15 @@ const textVariant2 = {
         opacity: 1,
         y: 0,
         transition: {
-            type: 'tween',
-            ease: 'easeIn'
+            type: "tween",
+            ease: "easeIn"
         }
     }
 };
 const fadeIn = (direction, type, delay, duration)=>({
         hidden: {
-            x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-            y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
+            x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+            y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
             opacity: 0
         },
         show: {
@@ -183,24 +183,24 @@ const fadeIn = (direction, type, delay, duration)=>({
             opacity: 1,
             transition: {
                 type,
-                delay,
-                duration,
-                ease: 'easeOut'
+                delay: delay * 0.1,
+                duration: duration ? duration * 0.5 : 0.3,
+                ease: "easeOut"
             }
         }
     });
 const planetVariants = (direction)=>({
         hidden: {
-            x: direction === 'left' ? '-100%' : '100%',
+            x: direction === "left" ? "-100%" : "100%",
             rotate: 120
         },
         show: {
             x: 0,
             rotate: 0,
             transition: {
-                type: 'spring',
+                type: "spring",
                 duration: 1.8,
-                delay: 0.5
+                delay: 0.1
             }
         }
     });
@@ -213,10 +213,10 @@ const zoomIn = (delay, duration)=>({
             scale: 1,
             opacity: 1,
             transition: {
-                type: 'tween',
-                delay,
-                duration,
-                ease: 'easeOut'
+                type: "tween",
+                delay: delay * 0.1,
+                duration: duration ? duration * 0.5 : 0.3,
+                ease: "easeOut"
             }
         }
     });
@@ -225,7 +225,7 @@ const footerVariants = {
         opacity: 0,
         y: 50,
         transition: {
-            type: 'spring',
+            type: "spring",
             stiffness: 300,
             damping: 140
         }
@@ -234,9 +234,9 @@ const footerVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            type: 'spring',
+            type: "spring",
             stiffness: 80,
-            delay: 0.5
+            delay: 0.1
         }
     }
 };
