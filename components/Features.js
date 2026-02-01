@@ -62,6 +62,7 @@ const Features = ({
             src={`${slides[currentIndex].url}`}
             onEnded={() => nextSlide()}
             alt="model-s-battery"
+            suppressHydrationWarning
           />
         </div>
 

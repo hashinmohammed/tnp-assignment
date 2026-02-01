@@ -428,3 +428,907 @@ It can also happen if the client has a browser extension installed which messes 
                 ...
               ...
 
+[00:12:47.009] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:14:44.671] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/model3" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:14:47.285] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="modelx/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/modelx" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="modelx/pag...">
+                  <SegmentTrieNode>
+                  <Page>
+                    <ModelXClient>
+                      <div className="overflow-y...">
+                        <Banner>
+                        <motion.div>
+                        <Photo>
+                        <Video>
+                          <div className="w-[100vw] ...">
+                            <div className={" h-auto"}>
+                              <div className="w-[90vw] m...">
+                                <video
+                                  className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflow-hidden..."
+                                  onEnded={function onEnded}
+                                  autoPlay={true}
+                                  muted={true}
+                                  src="/models/Cinematic-Experience.mp4"
+                                  alt=""
+-                                 data-video="0"
+                                >
+                              ...
+                            ...
+                        <Carinfo>
+                        <Carinfobanner>
+                        <Beyond>
+                        <Electricpowertrain>
+                        <Infovideo>
+                        <Carinfobanner>
+                        <Beyond>
+                        <Carinfo>
+                        <Infovideo>
+                        <Beyond>
+                        <Features url1="/models/mo..." Featureheading="Features" Featuredescription="Enhanced A..." ...>
+                          <div className="bg-white p...">
+                            <div>
+                            <div>
+                              <div className="max-w-[90v...">
+                                <video
+                                  className="object-contain w-[100%] h-[100%]"
+                                  autoPlay={true}
+                                  muted={true}
+                                  src="/models/navigate-on-autopilot.mp4"
+                                  onEnded={function onEnded}
+                                  alt="model-s-battery"
+-                                 data-video="1"
+                                >
+                              ...
+                            ...
+                        ...
+                ...
+              ...
+
+[00:14:50.495] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="modely/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/modely" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="modely/pag...">
+                      <SegmentTrieNode>
+                      <ModelY>
+                        <div className="overflow-y...">
+                          <Banner>
+                          <Infovideo>
+                          <Beyond>
+                          <Video>
+                          <Carinfobanner>
+                          <Beyond>
+                          <Infovideo url="/modely/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                            <div className="flex bg-wh...">
+                              <div className="relative">
+                                <video
+                                  className="w-[100%]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/modely/model-y.mp4"
+                                  alt="range-video"
+-                                 data-video="0"
+                                >
+                              ...
+                          ...
+                    ...
+                  ...
+        ...
+
+[00:14:52.264] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="solarroof/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/solarroof" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="solarroof/...">
+                      <SegmentTrieNode>
+                      <Solarroof>
+                        <div className="overflow-y...">
+                          <Banner>
+                          <Carinfobanner>
+                          <Beyond>
+                          <Infovideo>
+                          <Infovideo url="/solarroof..." semiheading="Durability" heading="Take on th..." ...>
+                            <div className="flex bg-wh...">
+                              <div className="relative">
+                                <video
+                                  className="w-[100%]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/solarroof/durability.webm"
+                                  alt="range-video"
+-                                 data-video="0"
+                                >
+                              ...
+                          <Beyond>
+                          <Features Feature1="Design" Feature1Description="Aerial ima..." Feature2="Installation" ...>
+                            <div className="bg-white py-8">
+                              <div>
+                                <div className="max-w-[90v...">
+                                  <video
+                                    className="object-contain w-[100%] h-[100%]"
+                                    autoPlay={true}
+                                    muted={true}
+                                    src="/solarroof/design.webm"
+                                    onEnded={function onEnded}
+                                    alt="model-s-battery"
+-                                   data-video="1"
+                                  >
+                                ...
+                          ...
+                    ...
+                  ...
+        ...
+
+[00:14:54.213] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="solarpanel/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/solarpanel" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="solarpanel...">
+                      <SegmentTrieNode>
+                      <Solarpanel>
+                        <div className="overflow-y...">
+                          <Banner>
+                          <Infovideo url="/solarpane..." semiheading="Design" heading="Sliik and ..." ...>
+                            <div className="flex bg-wh...">
+                              <div className="relative">
+                                <video
+                                  className="w-[100%]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/solarpanel/panel.mp4"
+                                  alt="range-video"
+-                                 data-video="0"
+                                >
+                              ...
+                          ...
+                    ...
+                  ...
+        ...
+
+[00:15:11.924] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="models/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/models" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="models/pag...">
+                    <SegmentTrieNode>
+                    <Page>
+                      <ModelsClient>
+                        <div className="overflow-y...">
+                          <Banner>
+                          <motion.div>
+                          <Photo>
+                          <Video>
+                            <div className="w-[100vw] ...">
+                              <div className={" h-auto"}>
+                                <div className="w-[90vw] m...">
+                                  <video
+                                    className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflow-hidd..."
+                                    onEnded={function onEnded}
+                                    autoPlay={true}
+                                    muted={true}
+                                    src="/models/Cinematic-Experience.mp4"
+                                    alt=""
+-                                   data-video="0"
+                                  >
+                                ...
+                              ...
+                          ...
+                            <motion.div variants={{...}} className="flex items...">
+                              <div className="flex items..." style={{opacity:0, ...}} ...>
+                                <video
+                                  className="max-w-[500px] mb-4 md:mr-[50px]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/models/Immersive-sound.mp4"
+                                  alt="stay-connected-image"
+-                                 data-video="1"
+                                >
+                                ...
+                          <Carinfobanner>
+                          <Beyond>
+                          <Electricpowertrain>
+                          <Carinfobanner>
+                          <Beyond>
+                          <Carinfo>
+                          <Infovideo url="/models/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                            <div className="flex bg-wh...">
+                              <div className="relative">
+                                <video
+                                  className="w-[100%]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/models/models-range.mp4"
+                                  alt="range-video"
+-                                 data-video="2"
+                                >
+                              ...
+                          <Beyond>
+                          <Features url1="/models/mo..." Featureheading="Features" Featuredescription="Enhanced A..." ...>
+                            <div className="bg-white p...">
+                              <div>
+                              <div>
+                                <div className="max-w-[90v...">
+                                  <video
+                                    className="object-contain w-[100%] h-[100%]"
+                                    autoPlay={true}
+                                    muted={true}
+                                    src="/models/navigate-on-autopilot.mp4"
+                                    onEnded={function onEnded}
+                                    alt="model-s-battery"
+-                                   data-video="3"
+                                  >
+                                ...
+                              ...
+                          ...
+                  ...
+                ...
+      ...
+
+[00:16:25.780] Server  LOG     ✓ Compiled in 693ms
+[00:16:25.936] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[00:16:28.568] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:16:28.581] Server  LOG     ✓ Compiled in 790ms
+[00:16:28.694] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[00:16:29.369] Server  ERROR   ⨯ ReferenceError: Image is not defined
+[00:16:31.579] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[00:17:01.204] Server  LOG     ✓ Compiled in 2.8s
+[00:17:01.222] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:02.540] Server  ERROR   ⨯ ReferenceError: Image is not defined
+[00:17:02.554] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:02.586] Server  ERROR   ⨯ ReferenceError: Image is not defined
+[00:17:03.975] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[00:17:09.861] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:09.864] Server  LOG     ✓ Compiled in 253ms
+[00:17:10.374] Server  ERROR   ⨯ ReferenceError: Image is not defined
+[00:17:12.639] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[00:17:12.652] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:13.015] Server  LOG     ✓ Compiled in 91ms
+[00:17:14.996] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="models/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/models" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="models/pag...">
+                    <SegmentTrieNode>
+                    <Page>
+                      <ModelsClient>
+                        <div className="overflow-y...">
+                          <Banner>
+                          <motion.div>
+                          <Photo>
+                          <Video>
+                            <div className="w-[100vw] ...">
+                              <div className={" h-auto"}>
+                                <div className="w-[90vw] m...">
+                                  <video
+                                    className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflow-hidd..."
+                                    onEnded={function onEnded}
+                                    autoPlay={true}
+                                    muted={true}
+                                    src="/models/Cinematic-Experience.mp4"
+                                    alt=""
+-                                   data-video="0"
+                                  >
+                                ...
+                              ...
+                          ...
+                            <motion.div variants={{...}} className="flex items...">
+                              <div className="flex items..." style={{opacity:0, ...}} ...>
+                                <video
+                                  className="max-w-[500px] mb-4 md:mr-[50px]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/models/Immersive-sound.mp4"
+                                  alt="stay-connected-image"
+-                                 data-video="1"
+                                >
+                                ...
+                          <Carinfobanner>
+                          <Beyond>
+                          <Electricpowertrain>
+                          <Carinfobanner>
+                          <Beyond>
+                          <Carinfo>
+                          <Infovideo url="/models/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                            <div className="flex bg-wh...">
+                              <div className="relative">
+                                <video
+                                  className="w-[100%]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/models/models-range.mp4"
+                                  alt="range-video"
+-                                 data-video="2"
+                                >
+                              ...
+                          <Beyond>
+                          <Features url1="/models/mo..." Featureheading="Features" Featuredescription="Enhanced A..." ...>
+                            <div className="bg-white p...">
+                              <div>
+                              <div>
+                                <div className="max-w-[90v...">
+                                  <video
+                                    className="object-contain w-[100%] h-[100%]"
+                                    autoPlay={true}
+                                    muted={true}
+                                    src="/models/navigate-on-autopilot.mp4"
+                                    onEnded={function onEnded}
+                                    alt="model-s-battery"
+-                                   data-video="3"
+                                  >
+                                ...
+                              ...
+                          ...
+                  ...
+                ...
+      ...
+
+[00:17:14.996] Browser WARN    Image with src "/models/model-s.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:17:20.594] Browser WARN    Image with src "/models/model-s-specs.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:17:28.110] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="solarpanel/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/solarpanel" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="solarpanel...">
+                      <SegmentTrieNode>
+                      <Solarpanel>
+                        <div className="overflow-y...">
+                          <Banner>
+                          <Infovideo url="/solarpane..." semiheading="Design" heading="Sliik and ..." ...>
+                            <div className="flex bg-wh...">
+                              <div className="relative">
+                                <video
+                                  className="w-[100%]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/solarpanel/panel.mp4"
+                                  alt="range-video"
+-                                 data-video="0"
+                                >
+                              ...
+                          ...
+                    ...
+                  ...
+        ...
+
+[00:17:28.578] Browser WARN    Image with src "/solarpanel/solarpanel.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:17:47.150] Server  LOG     ✓ Compiled in 2.2s
+[00:17:49.631] Browser WARN    Image with src "/solarpanel/batteryback.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:17:49.631] Browser WARN    Image with src "/solarroof/stock.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:18:08.171] Server  LOG     ✓ Compiled in 355ms
+[00:18:09.012] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:18:28.190] Server  LOG     ✓ Compiled in 283ms
+[00:19:09.066] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/solarpanel" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <Infovideo url="/solarpane..." semiheading="Design" heading="Sliik and ..." ...>
+                                <div className="flex bg-wh...">
+                                  <div className="relative">
+                                    <video
+                                      className="w-[100%]"
+                                      autoPlay={true}
+                                      loop={true}
+                                      muted={true}
+                                      src="/solarpanel/panel.mp4"
+                                      alt="range-video"
+-                                     data-video="0"
+                                    >
+                                  ...
+                  ...
+
+[00:19:09.221] Browser WARN    Image with src "/solarpanel/solarpanel.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:09.221] Browser WARN    Image with src "/solarpanel/batteryback.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:09.221] Browser WARN    Image with src "/solarroof/stock.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:09.221] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:19:39.848] Browser WARN    Image with src "/model3/model-3.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:39.848] Browser WARN    Image with src "/model3/model-3-mountain.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:39.848] Browser WARN    Image with src "/model3/model-3-blue.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:39.848] Browser WARN    Image with src "/model3/model-3-interior.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:39.848] Browser WARN    Image with src "/models/model-s-specs.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:19:51.687] Browser WARN    Image with src "/model3/model-3.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:51.687] Browser WARN    Image with src "/model3/model-3-mountain.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:51.687] Browser WARN    Image with src "/model3/model-3-blue.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:51.687] Browser WARN    Image with src "/model3/model-3-interior.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:19:51.687] Browser WARN    Image with src "/models/model-s-specs.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:19:56.100] Browser WARN    Image with src "/model3/model-3-mobile.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:21:56.877] Server  LOG     ✓ Compiled in 1086ms
+[00:22:32.503] Server  LOG     ✓ Compiled in 322ms
+[00:22:34.476] Server  LOG     ✓ Compiled in 190ms
+[00:23:06.341] Server  LOG     ✓ Compiled in 764ms
+[00:23:07.731] Server  LOG     ✓ Compiled in 202ms
+[00:23:35.061] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/models" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <div className="overflow-y...">
+                                <Banner>
+                                <motion.div>
+                                <Photo>
+                                <Video>
+                                  <div className="w-[100vw] ...">
+                                    <div className={" h-auto"}>
+                                      <div className="w-[90vw] m...">
+                                        <video
+                                          className="object-fill w-[100%] h-[40vh] transition-all duration-500 overflo..."
+                                          onEnded={function onEnded}
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/Cinematic-Experience.mp4"
+                                          alt=""
+-                                         data-video="0"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                                  <motion.div variants={{...}} className="flex items...">
+                                    <div className="flex items..." style={{opacity:0, ...}} ...>
+                                      <video
+                                        className="max-w-[500px] mb-4 md:mr-[50px]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/Immersive-sound.mp4"
+                                        alt="stay-connected-image"
+-                                       data-video="1"
+                                      >
+                                      ...
+                                <Carinfobanner>
+                                <Beyond>
+                                <Electricpowertrain>
+                                <Carinfobanner>
+                                <Beyond>
+                                <Carinfo>
+                                <Infovideo url="/models/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                                  <div className="flex bg-wh...">
+                                    <div className="relative">
+                                      <video
+                                        className="w-[100%]"
+                                        autoPlay={true}
+                                        loop={true}
+                                        muted={true}
+                                        src="/models/models-range.mp4"
+                                        alt="range-video"
+-                                       data-video="2"
+                                      >
+                                    ...
+                                <Beyond>
+                                <Features url1="/models/mo..." Featureheading="Features" ...>
+                                  <div className="bg-white p...">
+                                    <div>
+                                    <div>
+                                      <div className="max-w-[90v...">
+                                        <video
+                                          className="object-contain w-[100%] h-[100%]"
+                                          autoPlay={true}
+                                          muted={true}
+                                          src="/models/navigate-on-autopilot.mp4"
+                                          onEnded={function onEnded}
+                                          alt="model-s-battery"
+-                                         data-video="3"
+                                        >
+                                      ...
+                                    ...
+                                ...
+                  ...
+
+[00:23:35.061] Browser WARN    Image with src "/models/interior.jpg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:23:35.061] Browser WARN    Image with src "/models/model-s-plaid-battery.jpg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:23:39.616] Browser WARN    Image with src "/models/model-s-battery.jpg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:23:42.773] Browser WARN    Image with src "/models/optimized-aerodynamics.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:23:43.384] Browser WARN    Image with src "/models/refined-styling.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:23:45.185] Browser WARN    Image with src "/models/model-s-specs.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:20.390] Browser WARN    Image with src "/models/interior-mobile.jpg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:26:21.082] Server  LOG     ✓ Compiled in 991ms
+[00:26:21.291] Server  LOG     ✓ Compiled in 214ms
+[00:27:15.986] Browser WARN    Image with src "/models/interior.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:27:24.193] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/modely" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <Infovideo url="/modely/mo..." semiheading="Range" heading="Go Anywhere" ...>
+                                <div className="flex bg-wh...">
+                                  <div className="relative">
+                                    <video
+                                      className="w-[100%]"
+                                      autoPlay={true}
+                                      loop={true}
+                                      muted={true}
+                                      src="/modely/model-y.mp4"
+                                      alt="range-video"
+-                                     data-video="0"
+                                    >
+                                  ...
+                  ...
+
+[00:27:28.226] Browser WARN    Image with src "/models/model-s-specs.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:27:32.430] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="solarpanel/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/solarpanel" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="solarpanel...">
+                      <SegmentTrieNode>
+                      <Solarpanel>
+                        <div className="overflow-y...">
+                          <Banner>
+                          <Infovideo url="/solarpane..." semiheading="Design" heading="Sliik and ..." ...>
+                            <div className="flex bg-wh...">
+                              <div className="relative">
+                                <video
+                                  className="w-[100%]"
+                                  autoPlay={true}
+                                  loop={true}
+                                  muted={true}
+                                  src="/solarpanel/panel.mp4"
+                                  alt="range-video"
+-                                 data-video="0"
+                                >
+                              ...
+                          ...
+                    ...
+                  ...
+        ...
+
+[00:28:56.769] Server  LOG     ✓ Compiled in 1124ms
+[02:07:43.366] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:07:49.734] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/solarpanel" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[02:08:04.200] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:08:13.973] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:18.493] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:08:24.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:27.597] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:27.810] Browser WARN    Image with src "/models/interior.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[02:08:29.841] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:31.272] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:32.804] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:35.815] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:08:39.408] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:39.608] Browser WARN    Image with src "/models/interior.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[02:09:09.197] Browser WARN    Image with src "/models/interior.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[02:09:15.553] Browser WARN    Image with src "/models/optimized-aerodynamics.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:09:15.553] Browser WARN    Image with src "/models/refined-styling.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:09:16.561] Browser WARN    Image with src "/models/model-s-specs.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

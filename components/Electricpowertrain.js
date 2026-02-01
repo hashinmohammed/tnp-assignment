@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { textVariant } from "../constants/motion";
 
@@ -57,10 +58,13 @@ const Electricpowertrain = ({
 
       <div>
         <div className="max-w-[90vw] mx-auto mb-14 rounded-2xl bg-white max-h-[100vh] overflow-hidden">
-          <img
-            className="object-contain w-[100%] h-[100%]"
+          <Image
+            className="object-contain w-[100%] h-[100%] w-full h-auto"
             src={currentIndex ? Powertrain[0].url : Powertrain[1].url}
             alt="model-s-battery"
+            width={1200}
+            height={800}
+            sizes="90vw"
           />
         </div>
 

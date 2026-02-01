@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import {
   ModelSPlaid1_Specs,
   ModelSPlaid2_Specs,
@@ -13,10 +14,12 @@ const Specs = () => {
   return (
     <div className="flex flex-col lg:flex-row">
       <div>
-        <img
-          className="md:w-[800px] "
+        <Image
+          className="md:w-[800px] h-auto w-full"
           src="/models/model-s-specs.jpg"
           alt="car-specs"
+          width={800}
+          height={450}
         />
       </div>
       <div className="my-16 ">

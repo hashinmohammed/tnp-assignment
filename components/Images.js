@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Video = () => {
   const slides = [
@@ -35,11 +36,13 @@ const Video = () => {
   return (
     <div className="w-[100vw] h-[100%] transition-all duration-700 bg-white">
       <div className=" h-auto">
-        <div className="w-[90vw] h-auto ml-[5vw] mt-[5vw] rounded-2xl bg-center overflow-hidden transition-all bg-cover object-cover duration-500">
-          <img
-            className={`object-fill w-[100%] h-[40vh] transition-all duration-500 overflow-hidden sm:h-[90vh]`}
+        <div className="w-[90vw] h-[40vh] sm:h-[90vh] ml-[5vw] mt-[5vw] rounded-2xl bg-center overflow-hidden transition-all bg-cover object-cover duration-500 relative">
+          <Image
+            className={`object-cover w-full h-full transition-all duration-500 overflow-hidden`}
             src={`${slides[currentIndex].url}`}
             alt=""
+            fill
+            sizes="90vw"
           />
         </div>
         <div className="flex top-8 mt-10 justify-start py-2 width-[100vw] ml-[5%] lg:ml-[25%]">

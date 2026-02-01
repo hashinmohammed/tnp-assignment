@@ -1,5 +1,6 @@
 "use client";
 import style from "../styles/components.module.css";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Navbar = ({ fixed, white }) => {
@@ -93,7 +94,7 @@ const Navbar = ({ fixed, white }) => {
             setToggle(true);
           }}
         >
-          <img src="/close.svg" alt="close-icon" />
+          <Image src="/close.svg" alt="close-icon" width={30} height={30} />
         </div>
         <div className={`absolute top-16 left-10`}>
           <a href="/models">

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { textVariant } from "../constants/motion";
 
 const Infovideo = ({
@@ -24,9 +25,17 @@ const Infovideo = ({
             muted
             src={url}
             alt="range-video"
+            suppressHydrationWarning
           />
         ) : (
-          <img src={url} alt="range-image" />
+          <Image
+            src={url}
+            alt="range-image"
+            width={1000}
+            height={600}
+            sizes="100vw"
+            className="w-full h-auto"
+          />
         )}
       </div>
       <motion.div

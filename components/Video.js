@@ -58,6 +58,7 @@ const Video = () => {
             muted
             src={`${slides[currentIndex].url}`}
             alt=""
+            suppressHydrationWarning
           />
         </div>
 

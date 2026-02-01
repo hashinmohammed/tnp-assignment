@@ -1,15 +1,18 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { Roof1_Specs, Roof2_Specs } from "../constants/data";
 
 const Roofspecs = () => {
   return (
     <div className="flex flex-col lg:flex-row">
       <div>
-        <img
-          className="md:w-[800px] "
+        <Image
+          className="md:w-[800px] h-auto"
           src="/solarroof/roof.png"
           alt="car-specs"
+          width={800}
+          height={450}
         />
       </div>
       <div className="my-16 ">

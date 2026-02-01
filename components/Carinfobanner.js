@@ -1,5 +1,6 @@
 "use client";
 import style from "../styles/components.module.css";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { textVariant } from "../constants/motion";
 
@@ -14,10 +15,13 @@ export const Carinfobanner = ({
 }) => {
   return (
     <div className="relative lg:h-auto overflow-hidden">
-      <img
-        className="w-screen object-contain lg:h-auto"
+      <Image
+        className="w-screen object-contain lg:h-auto w-full h-auto"
         src={urlDesktop}
         alt="model-y-image"
+        width={1920}
+        height={1080}
+        sizes="100vw"
       />
       <motion.div
         initial="hidden"

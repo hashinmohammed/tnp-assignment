@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { textVariant } from "../constants/motion";
 
 const Ordernow = ({ Ordernowheading, url, black }) => {
@@ -31,7 +32,13 @@ const Ordernow = ({ Ordernowheading, url, black }) => {
           </motion.button>
         </div>
         <motion.div variants={textVariant(1.1)} className="flex-1">
-          <img src={url} className="text-sm object-contain overflow-hidden" />
+          <Image
+            src={url}
+            className="text-sm object-contain overflow-hidden w-full h-auto"
+            alt="order-now-image"
+            width={500}
+            height={300}
+          />
         </motion.div>
       </div>
     </motion.div>

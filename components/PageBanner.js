@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import style from "../styles/components.module.css";
 import useWindowSize from "./windowsize";
 import { motion } from "framer-motion";
@@ -32,16 +33,24 @@ export const Banner = ({
         viewport={{ once: false, amount: 0.25 }}
       >
         {width < 480 ? (
-          <img
-            className="w-screen h-screen object-cover"
+          <Image
+            className="w-full h-auto object-cover md:h-screen lg:h-auto"
             src={urlMobile}
             alt="model-y-image"
+            width={750}
+            height={1334}
+            sizes="100vw"
+            priority
           />
         ) : (
-          <img
-            className="w-screen object-cover md:h-screen lg:h-auto"
+          <Image
+            className="w-full h-auto object-cover md:h-screen lg:h-auto"
             src={urlDesktop}
             alt="model-y-image"
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            priority
           />
         )}
         <div

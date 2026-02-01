@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { textVariant } from "../constants/motion";
 
 const Carinfo = ({
@@ -26,10 +27,12 @@ const Carinfo = ({
         variants={textVariant(0.5)}
         className={`flex items-center justify-center mx-4 mb-10 flex-col ${reverse === "true" ? "md:flex-row-reverse" : "md:flex-row"}`}
       >
-        <img
-          className="max-w-[500px] mb-4 md:mr-[50px]"
+        <Image
+          className="max-w-[500px] mb-4 md:mr-[50px] w-full h-auto"
           src={carinfourl1}
           alt="stay-connected-image"
+          width={500}
+          height={300}
         />
         <div className="max-w-[500px] mb-4 md:mr-12 ">
           <h1 className="font-bold mb-4">{carinfoheading1}</h1>
@@ -48,12 +51,15 @@ const Carinfo = ({
             muted
             src={carinfourl2}
             alt="stay-connected-image"
+            suppressHydrationWarning
           />
         ) : (
-          <img
-            className="max-w-[500px] mb-4 md:mr-[50px]"
+          <Image
+            className="max-w-[500px] mb-4 md:mr-[50px] w-full h-auto"
             src={carinfourl2}
             alt="stay-connected-image"
+            width={500}
+            height={300}
           />
         )}
         <div className="max-w-[500px] mb-4 md:mr-12 ">
@@ -65,10 +71,12 @@ const Carinfo = ({
         variants={textVariant(1.5)}
         className={`flex items-center justify-center mx-4 mb-10 flex-col ${reverse === "true" ? "md:flex-row-reverse" : "md:flex-row"}`}
       >
-        <img
-          className="max-w-[500px] mb-4 md:mr-[50px]"
+        <Image
+          className="max-w-[500px] mb-4 md:mr-[50px] w-full h-auto"
           src={carinfourl3}
           alt="stay-connected-image"
+          width={500}
+          height={300}
         />
         <div className="max-w-[500px] mb-4 md:mr-12 ">
           <h1 className="font-bold mb-4">{carinfoheading3}</h1>
