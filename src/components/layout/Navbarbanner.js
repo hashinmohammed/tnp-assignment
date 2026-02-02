@@ -79,7 +79,20 @@ const Navbar = ({ fixed, white }) => {
           dispatch(toggleSideMenu());
         }}
       >
-        Menu
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
       </div>
       <div
         className={`${!isSideMenuOpen ? `translate-x-[100%]` : `translate-x-0`} transition-all duration-1000 fixed w-[240px] h-screen top-0 right-0 bottom-0 lg:w-[300px] bg-white/50 backdrop-blur-[10px]`}

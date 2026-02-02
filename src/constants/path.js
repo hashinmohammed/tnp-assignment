@@ -7,4 +7,5 @@ export const PATHS = {
   CYBERTRUCK: "/cybertruck",
   SOLAR_ROOF: "/solarroof",
   SOLAR_PANELS: "/solarpanel",
+  VEHICLES: "/vehicles",
 };

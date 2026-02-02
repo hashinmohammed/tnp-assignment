@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="snap-y snap-mandatory h-screen">
         <VideoBanner
           title="Tesla"
-          videoSource="/home/vid.webm"
+          videoSource="https://res.cloudinary.com/doqeslffo/video/upload/v1770028747/vid_qdtssu.webm"
           description="Schedule a Demo Drive"
           underline={true}
         />

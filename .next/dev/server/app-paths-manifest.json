@@ -1,3 +1,6 @@
 {
-  "/page": "app/page.js"
+  "/cybertruck/page": "app/cybertruck/page.js",
+  "/models/page": "app/models/page.js",
+  "/page": "app/page.js",
+  "/vehicles/page": "app/vehicles/page.js"
 }

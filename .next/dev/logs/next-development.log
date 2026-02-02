@@ -1,5 +1,88 @@
-[00:00:01.051] Server  LOG     ✓ Ready in 645ms
-[00:00:07.324] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.653] Server  LOG     ✓ Ready in 1137ms
+[00:00:05.414] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:00:09.677] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/model-x_mvb2ge.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:10.278] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/model-3_yblr0i.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:11.903] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:00:11.998] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:00:12.006] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:00:12.014] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:02:34.719] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:03:55.506] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:04:11.520] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -41,11 +124,8 @@ It can also happen if the client has a browser extension installed which messes 
                 ...
               ...
 
-[00:04:27.995] Server  LOG     ✓ Compiled in 193s
-[00:05:31.681] Server  LOG     ✓ Compiled in 63.9s
-[00:09:40.096] Server  LOG     ✓ Compiled in 237.9s
-[00:10:38.931] Server  LOG     ✓ Compiled in 69s
-[00:11:15.305] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:07:53.630] Server  LOG     ✓ Compiled in 211.5s
+[00:08:33.478] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -71,7 +151,7 @@ It can also happen if the client has a browser extension installed which messes 
                       <div>
                         <Navbar>
                         <div className="snap-y sna...">
-                          <VideoBanner title="Tesla" videoSource="/home/vid...." description="Schedule a..." ...>
+                          <VideoBanner title="Tesla" videoSource="https://re..." description="Schedule a..." ...>
                             <motion.div className="snap-start..." variants={function staggerContainer} initial="hidden" ...>
                               <div className="snap-start..." style={{}} ref={function useMotionRef.useCallback}>
                                 <video
@@ -87,3 +167,47 @@ It can also happen if the client has a browser extension installed which messes 
                 ...
               ...
 
+[00:13:39.858] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:14:47.159] Server  LOG     ○ Compiling /models ...
+[00:15:05.540] Browser WARN    Image with src "/models/interior.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[00:15:12.595] Server  LOG     ○ Compiling /cybertruck ...
+[00:19:13.670] Server  LOG     ✓ Compiled in 29.2s
+[00:19:24.648] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028690/cybertruck-landing_dtk5lr.jpg"
+[00:20:12.662] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/cybertruck-last_ahdv7s.jpg"
+[00:24:08.658] Server  LOG     ✓ Compiled in 293.9s

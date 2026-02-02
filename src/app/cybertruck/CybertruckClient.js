@@ -11,8 +11,8 @@ const CybertruckClient = () => {
     <div className="overflow-y-auto bg-tesla-dark">
       <PageBanner
         title="Cybertruck"
-        urlDesktop="/home/cybertruck-landing.jpg"
-        urlMobile="/home/cybertruck-landing.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770028690/cybertruck-landing_dtk5lr.jpg"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770028690/cybertruck-landing_dtk5lr.jpg"
         description="Better Utility Than a Truck with More Performance Than a Sports Car"
         infoheading1="340 mi"
         infodescription1="Range (EPA est.)"
@@ -38,7 +38,7 @@ const CybertruckClient = () => {
         </motion.h1>
       </motion.div>
       <Carinfobanner
-        urlDesktop="/home/cybertruck.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg"
         infoheading1="Shatter"
         infodescription1="Resistant Glass"
         infoheading2="Stainless"
@@ -60,7 +60,7 @@ const CybertruckClient = () => {
       />
       <Ordernow
         Ordernowheading="Cybertruck"
-        url="/home/cybertruck-last.jpeg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/cybertruck-last_ahdv7s.jpg"
         black="false"
       />
     </div>

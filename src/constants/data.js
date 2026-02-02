@@ -2,66 +2,90 @@ export const Bannerinfos = [
   {
     id: "1",
     title: "Model Y",
-    urlDesktop: "/home/model-y.jpg",
-    urlMobile: "/home/model-y-mobile.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028682/model-y-mobile_f3hu0j.jpg",
     description: "Schedule a Demo Drive",
     underline: true,
+    category: "Vehicles",
   },
   {
     id: "2",
     title: "Model 3",
-    urlDesktop: "/home/model-3.jpg",
-    urlMobile: "/home/model-3-mobile.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/model-3_yblr0i.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/model-3-mobile_c0kza6.jpg",
     description: "Schedule a Demo Drive",
     underline: true,
+    category: "Vehicles",
   },
   {
     id: "3",
     title: "Model S",
-    urlDesktop: "/home/model-s.jpg",
-    urlMobile: "/home/model-s-mobile.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s_ixzopm.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s-mobile_qxpeas.jpg",
     description: "Schedule a Demo Drive",
     underline: true,
+    category: "Vehicles",
   },
   {
     id: "4",
     title: "Model X",
-    urlDesktop: "/home/model-x.jpg",
-    urlMobile: "/home/model-x-mobile.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/model-x_mvb2ge.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028676/model-x-mobile_ns3mmm.jpg",
     description: "Schedule a Demo Drive",
     underline: true,
+    category: "Vehicles",
   },
   {
     id: "5",
     title: "Cybertruck",
-    urlDesktop: "/home/cybertruck.jpg",
-    urlMobile: "/home/cybertruck.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg",
     description: "",
     underline: false,
+    category: "Vehicles",
   },
   {
     id: "6",
     title: "Solar Planes",
-    urlDesktop: "/home/solarpanels.jpg",
-    urlMobile: "/home/solarpanels-mobile.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/solarpanels_rd4rfk.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/solarpanels-mobile_jtfluf.jpg",
     description: "Lowest Cost Solar Panels in America",
     underline: false,
+    category: "Energy",
   },
   {
     id: "7",
     title: "Solar Roof",
-    urlDesktop: "/home/solarroof.jpg",
-    urlMobile: "/home/solarroof-mobile.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028688/solarroof_yhn4qi.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/solarroof-mobile_wmbpds.jpg",
     description: "Produce Clean Energy From Your Roof",
     underline: false,
+    category: "Energy",
   },
   {
     id: "8",
     title: "Accessories",
-    urlDesktop: "/home/accessories.jpg",
-    urlMobile: "/home/accessories-mobile.jpg",
+    urlDesktop:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/accessories_w9ajv3.jpg",
+    urlMobile:
+      "https://res.cloudinary.com/doqeslffo/image/upload/v1770028684/accessories-mobile_qs41ej.jpg",
     description: "",
     underline: false,
+    category: "Accessories",
   },
 ];
 
