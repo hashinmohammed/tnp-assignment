@@ -18,8 +18,8 @@ const ModelsClient = () => {
     <div className="overflow-y-auto bg-tesla-dark">
       <PageBanner
         title="Model S"
-        urlDesktop="/models/model-s.jpg"
-        urlMobile="/models/model-s-mobile.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770032623/model-s_aeolii.jpg"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770032619/model-s-mobile_mjjjt0.jpg"
         description="Plaid"
         infoheading1="396 mi"
         infodescription1="Range (EPA est.)"
@@ -45,25 +45,25 @@ const ModelsClient = () => {
         </motion.h1>
       </motion.div>
       <Photo
-        urlDesktop="/models/interior.jpg"
-        urlMobile="/models/interior-mobile.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770032622/interior-mobile_c2pm4m.jpg"
       />
       <Video />
       <Carinfo
         carinfoheading1="Stay Connected"
         carinfodescription1="Instantly connect with multi-device Bluetooth, or fast charge devices with wireless and 36-watt USB-C charging."
-        carinfourl1="/models/stay-connected.jpg"
+        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032609/stay-connected_izi9zj.jpg"
         carinfoheading2="Immersive Sound"
         carinfodescription2="A 22-speaker, 960-watt audio system with Active Road Noise Reduction offers immersive listening and studio-grade sound quality."
-        carinfourl2="/models/Immersive-sound.mp4"
+        carinfourl2="https://res.cloudinary.com/doqeslffo/video/upload/v1770032626/Immersive-sound_qmdwto.mp4"
         carinfoheading3="Room for Everything"
         carinfodescription3="With front and rear trunks and fold-flat seats you can fit your bike without taking the wheel off—and your luggage too."
-        carinfourl3="/models/room-for-everything.jpg"
+        carinfourl3="https://res.cloudinary.com/doqeslffo/image/upload/v1770032611/room-for-everything_crfkps.jpg"
         video="true"
         reverse="false"
       />
       <Carinfobanner
-        urlDesktop="/models/model-s-blue.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770032620/model-s-blue_drba3h.jpg"
         infoheading1="1,020 hp"
         infodescription1="Peak Power"
         infoheading2="9.23 s"
@@ -78,7 +78,7 @@ const ModelsClient = () => {
         black="false"
       />
       <Electricpowertrain
-        url1="/models/model-s-battery.jpg"
+        url1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/model-s-battery_m3x5mi.jpg"
         epheading1="Model S"
         epdescription1="Dual Motor All-Wheel Drive unlocks more range than any other vehicle in our current lineup, with insane power and maximum control."
         epstatheading11="3.1 s"
@@ -87,7 +87,7 @@ const ModelsClient = () => {
         epstatdescription11="0-60 mph"
         epstatdescription12="Range (EPA est.)"
         epstatdescription13="Peak Power"
-        url2="/models/model-s-plaid-battery.jpg"
+        url2="https://res.cloudinary.com/doqeslffo/image/upload/v1770032616/model-s-plaid-battery_xgvsvr.jpg"
         epheading2="Model S Plaid"
         epdescription2="Maintain 1,000+ horsepower all the way to 200 mph with Tri-Motor All-Wheel Drive, featuring torque vectoring and three independent carbon-sleeved rotors."
         epstatheading21="1.99 s*"
@@ -97,7 +97,7 @@ const ModelsClient = () => {
         epstatdescription22="Range (EPA est.)"
         epstatdescription23="Peak Power"
       />
-      <Carinfobanner urlDesktop="/models/models-wave.jpg" />
+      <Carinfobanner urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770032617/models-wave_fs4wpi.jpg" />
       <Beyond
         Beyondheading=" Designed for Efficiency"
         Beyondsemiheading="Exterior"
@@ -107,18 +107,18 @@ const ModelsClient = () => {
       <Carinfo
         carinfoheading1="Relentless Performance"
         carinfodescription1="Staggered, performance wheels and tires keep the car planted and help transfer maximum power down to the road."
-        carinfourl1="/models/relentless-performance.jpg"
+        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032614/relentless-performance_cxvgit.jpg"
         carinfoheading2="Optimized Aerodynamics"
         carinfodescription2="Attention to detail on all exterior surfaces makes Model S the most aerodynamic production car on Earth."
-        carinfourl2="/models/optimized-aerodynamics.jpg"
+        carinfourl2="https://res.cloudinary.com/doqeslffo/image/upload/v1770032615/optimized-aerodynamics_vckwbj.jpg"
         carinfoheading3="Refined Styling"
         carinfodescription3="An iconic silhouette meets refreshed, elegant proportions."
-        carinfourl3="/models/refined-styling.jpg"
+        carinfourl3="https://res.cloudinary.com/doqeslffo/image/upload/v1770032614/refined-styling_lhxn42.jpg"
         video="false"
         reverse="true"
       />
       <Infovideo
-        url="/models/models-range.mp4"
+        url="https://res.cloudinary.com/doqeslffo/video/upload/v1770032666/models-range_ybynns.mp4"
         semiheading="Range"
         heading="Go Anywhere"
         description="With up to 405 miles of estimated range and access to the world’s largest and most powerful fast charging network, you’ll spend less time plugged in and more time on the road. Chat with a Tesla Advisor to learn more about Model S or schedule a demo drive today."
@@ -132,7 +132,7 @@ const ModelsClient = () => {
         black="false"
       />
       <Features
-        url1="/models/model-s-battery.jpg"
+        url1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/model-s-battery_m3x5mi.jpg"
         Featureheading="Features"
         Featuredescription="Enhanced Autopilot and Full Self-Driving capability introduce additional features and improve existing functionality to make your car more capable over time, including:"
         Feature1="Navigate on Autopilot"
@@ -147,7 +147,7 @@ const ModelsClient = () => {
       <Specs />
       <Ordernow
         Ordernowheading="Model S"
-        url="/models/models-ordernow.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770032618/models-ordernow_iymqn8.jpg"
         black="false"
       />
     </div>

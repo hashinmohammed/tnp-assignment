@@ -4,31 +4,31 @@ import { useState } from "react";
 const Video = () => {
   const slides = [
     {
-      url: "/models/Cinematic-Experience.mp4",
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032660/Cinematic-Experience_zrovh6.mp4",
       heading: "Cinematic Experience",
       description:
         "A 17” touchscreen with left-right tilt offers 2200 x 1300 resolution, true colors and exceptional responsiveness for gaming, movies and more.",
     },
     {
-      url: "/models/Yoke-Steering.mp4",
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032622/Yoke-Steering_wlfnkw.mp4",
       heading: "Yoke Steering",
       description:
         "A bold new approach gives you a true connection to Model S, offering better steering feel and unobstructed views of your dash and the road ahead. Tap the brake and Model S automatically selects the correct direction to start your trip.",
     },
     {
-      url: "/models/Perfect-Environment.mp4",
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032623/Perfect-Environment_bvlcgh.mp4",
       heading: "Perfect Environment",
       description:
         "Air vents are hidden throughout the cabin, while tri-zone temperature controls, ventilated seats and HEPA filtration deliver the perfect environment.",
     },
     {
-      url: "/models/Redsigned-Second-Row.mp4",
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032613/Redsigned-Second-Row_efuwpi.mp4",
       heading: "Redesigned Second Row",
       description:
         "Seating for three adults, with extra legroom, headroom and a stowable armrest with integrated storage and wireless charging.",
     },
     {
-      url: "/models/Console-Grade-Gaming.mp4",
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032632/Console-Grade-Gaming_elb6it.mp4",
       heading: "Console-Grade Gaming",
       description:
         "Up to 10 teraflops of processing power unlock in-car gaming on-par with today’s newest consoles. Play from any seat with wireless controller and headset compatibility.",

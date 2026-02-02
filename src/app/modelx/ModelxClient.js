@@ -45,20 +45,20 @@ const ModelXClient = () => {
         </motion.h1>
       </motion.div>
       <Photo
-        urlDesktop="/models/interior.jpg"
-        urlMobile="/models/interior-mobile.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770032622/interior-mobile_c2pm4m.jpg"
       />
       <Video />
       <Carinfo
         carinfoheading1="Stay Connected"
         carinfodescription1="Instantly connect with multi-device Bluetooth, or fast charge devices with wireless and 36-watt USB-C charging."
-        carinfourl1="/models/stay-connected.jpg"
+        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032609/stay-connected_izi9zj.jpg"
         carinfoheading2="Sublime Sound"
         carinfodescription2="A 22-speaker, 960-watt audio system with Active Road Noise Reduction offers the best listening experience wherever you are."
         carinfourl2="/modelx/sublime-sound.jpg"
         carinfoheading3="Room for Everything"
         carinfodescription3="With front and rear trunks and fold-flat seats you can fit your bike without taking the wheel off—and your luggage too."
-        carinfourl3="/models/room-for-everything.jpg"
+        carinfourl3="https://res.cloudinary.com/doqeslffo/image/upload/v1770032611/room-for-everything_crfkps.jpg"
         video="false"
         reverse="false"
       />
@@ -78,7 +78,7 @@ const ModelXClient = () => {
         black="false"
       />
       <Electricpowertrain
-        url1="/models/model-s-battery.jpg"
+        url1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/model-s-battery_m3x5mi.jpg"
         epheading1="Model X"
         epdescription1="Dual Motor All-Wheel Drive platform has the longest range, and now delivers insane power and acceleration."
         epstatheading11="3.8 s"
@@ -87,7 +87,7 @@ const ModelXClient = () => {
         epstatdescription11="0-60 mph"
         epstatdescription12="Range (EPA est.)"
         epstatdescription13="Peak Power"
-        url2="/models/model-s-plaid-battery.jpg"
+        url2="https://res.cloudinary.com/doqeslffo/image/upload/v1770032616/model-s-plaid-battery_xgvsvr.jpg"
         epheading2="Model X Plaid"
         epdescription2="Tri Motor All-Wheel Drive platform with torque vectoring features three independent motors, each with a carbon-sleeved rotor that maintains 1,000+ horsepower all the way to top speed."
         epstatheading21="2.5 s*"
@@ -140,7 +140,7 @@ const ModelXClient = () => {
         black="false"
       />
       <Features
-        url1="/models/model-s-battery.jpg"
+        url1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/model-s-battery_m3x5mi.jpg"
         Featureheading="Features"
         Featuredescription="Enhanced Autopilot and Full Self-Driving capability introduce additional features and improve existing functionality to make your car more capable over time, including:"
         Feature1="Navigate on Autopilot"

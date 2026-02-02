@@ -16,10 +16,18 @@ const Features = ({
   Feature4Description,
 }) => {
   const slides = [
-    { url: "/models/navigate-on-autopilot.mp4" },
-    { url: "/models/auto-lane-change.mp4" },
-    { url: "/models/summon.mp4" },
-    { url: "/models/autopark.mp4" },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032659/navigate-on-autopilot_cmmocr.mp4",
+    },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032649/auto-lane-change_d4odql.mp4",
+    },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032621/summon_an0g70.mp4",
+    },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032651/autopark_mz3d18.mp4",
+    },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 

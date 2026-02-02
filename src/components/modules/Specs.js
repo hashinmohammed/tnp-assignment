@@ -16,7 +16,7 @@ const Specs = () => {
       <div>
         <Image
           className="md:w-[800px] h-auto w-full"
-          src="/models/model-s-specs.jpg"
+          src="https://res.cloudinary.com/doqeslffo/image/upload/v1770032618/model-s-specs_wynrka.jpg"
           alt="car-specs"
           width={800}
           height={450}

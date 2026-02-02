@@ -14,8 +14,8 @@ const Model3 = () => {
     <div className="overflow-y-auto bg-black">
       <PageBanner
         title="Model 3"
-        urlDesktop="/model3/model-3.jpg"
-        urlMobile="/model3/model-3-mobile.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770031244/model-3_mvv9fh.jpg"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770031242/model-3-mobile_fimqdp.jpg"
         description="Schedule a Demo Drive"
         infoheading1="358 mi"
         infodescription1="Range (EPA est.)"
@@ -34,7 +34,7 @@ const Model3 = () => {
         black="false"
       />
       <Carinfobanner
-        urlDesktop="/model3/model-3-mountain.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770031245/model-3-mountain_wnvm0o.jpg"
         infoheading1="3.1s"
         infodescription1="Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds"
         infoheading2="162 mph"
@@ -43,7 +43,7 @@ const Model3 = () => {
         infodescription3="Motor All-Wheel Drive instantly controls traction and torque, in all weather conditions"
       />
       <Carinfobanner
-        urlDesktop="/model3/model-3-blue.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770031247/model-3-blue_hx6tlp.jpg"
         infoheading1="2"
         infodescription1="Independent motors digitally control torque to the front and rear wheels"
         infoheading2="10 ms"
@@ -58,7 +58,7 @@ const Model3 = () => {
         black="false"
       />
       <Infovideo
-        url="/model3/model-3-red.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770031246/model-3-red_abtuqp.jpg"
         semiheading="Range"
         heading="Go Anywhere"
         description="Model 3 is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. And when you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network. "
@@ -71,7 +71,7 @@ const Model3 = () => {
         Beyonddescription="Autopilot's advanced safety and convenience features are designed to assist you with the most burdensome parts of driving. Chat with a Tesla Advisor to learn more about Model 3 or schedule a demo drive today."
         black="false"
       />
-      <Carinfobanner urlDesktop="/model3/model-3-interior.jpg" />
+      <Carinfobanner urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770031249/model-3-interior_uns5aw.jpg" />
       <Beyond
         Beyondheading="Built Around the Driver"
         Beyondsemiheading="Interior"
@@ -81,7 +81,7 @@ const Model3 = () => {
       <Specs />
       <Ordernow
         Ordernowheading="Experience Model 3"
-        url="/model3/model-3-ordernow.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770031241/model-3-ordernow_mgewh8.jpg"
         black="false"
       />
     </div>
