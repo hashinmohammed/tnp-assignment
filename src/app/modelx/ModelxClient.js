@@ -15,7 +15,7 @@ import Ordernow from "@/components/modules/Ordernow";
 
 const ModelXClient = () => {
   return (
-    <div className="overflow-y-auto bg-black">
+    <div className="overflow-y-auto bg-tesla-dark">
       <PageBanner
         title="Model X"
         urlDesktop="/modelx/model-x.jpg"

@@ -1,5 +1,4 @@
 "use client";
-import style from "@/styles/components.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { textVariant } from "@/constants/motion";
@@ -27,7 +26,7 @@ export const Carinfobanner = ({
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${style.ordernow} overflow-hidden absolute w-[100%] text-white top-[80%] flex items-center flex-col justify-center mx-8 md:top-[80%] md:flex-row `}
+        className="max-[480px]:top-[70%] overflow-hidden absolute w-[100%] text-white top-[80%] flex items-center flex-col justify-center mx-8 md:top-[80%] md:flex-row "
       >
         <div className="flex items-center overflow-hidden justify-center mr-12 sm:mr-0">
           <motion.div

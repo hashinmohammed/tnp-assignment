@@ -8,7 +8,7 @@ import Ordernow from "@/components/modules/Ordernow";
 
 const CybertruckClient = () => {
   return (
-    <div className="overflow-y-auto bg-black">
+    <div className="overflow-y-auto bg-tesla-dark">
       <PageBanner
         title="Cybertruck"
         urlDesktop="/home/cybertruck-landing.jpg"

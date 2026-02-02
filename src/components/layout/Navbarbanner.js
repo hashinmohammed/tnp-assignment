@@ -1,9 +1,9 @@
 "use client";
-import style from "@/styles/components.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleSideMenu, setSideMenuOpen } from "@/store/slices/uiSlice";
+import { PATHS } from "@/constants/path";
 
 const Navbar = ({ fixed, white }) => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const Navbar = ({ fixed, white }) => {
       className={`flex ${fixed ? "fixed" : "absolute"} bg-white text-black justify-between z-10 items-center w-screen py-5 px-6 lg:px-16 lg:py-6`}
       id="nav"
     >
-      <a className={`${style.font}`} href="/">
+      <a className="w-[120px]" href={PATHS.HOME}>
         <svg
           className="tds-icon tds-icon-logo-wordmark tds-site-logo-icon"
           viewBox="0 0 342 35"
@@ -37,44 +37,44 @@ const Navbar = ({ fixed, white }) => {
       </a>
 
       <div className="justify-between hidden text-sm font-bold xl:flex ">
-        <a href="/models">
-          <li className={`${style.list} cursor-pointer py-[4px] px-4`}>
+        <a href={PATHS.MODEL_S}>
+          <li className="hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 cursor-pointer py-[4px] px-4">
             Model S
           </li>
         </a>
-        <a href="/model3">
-          <li className={`${style.list} cursor-pointer py-[4px] px-4`}>
+        <a href={PATHS.MODEL_3}>
+          <li className="hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 cursor-pointer py-[4px] px-4">
             Model 3
           </li>
         </a>
-        <a href="/modelx">
-          <li className={`${style.list} cursor-pointer py-[4px] px-4`}>
+        <a href={PATHS.MODEL_X}>
+          <li className="hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 cursor-pointer py-[4px] px-4">
             Model X
           </li>
         </a>
-        <a href="/modely">
-          <li className={`${style.list} cursor-pointer py-[4px] px-4`}>
+        <a href={PATHS.MODEL_Y}>
+          <li className="hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 cursor-pointer py-[4px] px-4">
             Model Y
           </li>
         </a>
-        <a href="/cybertruck">
-          <li className={`${style.list} cursor-pointer py-[4px] px-4`}>
+        <a href={PATHS.CYBERTRUCK}>
+          <li className="hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 cursor-pointer py-[4px] px-4">
             Cybertruck
           </li>
         </a>
-        <a href="/solarroof">
-          <li className={`${style.list} cursor-pointer py-[4px] px-4`}>
+        <a href={PATHS.SOLAR_ROOF}>
+          <li className="hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 cursor-pointer py-[4px] px-4">
             Solar Roof
           </li>
         </a>
-        <a href="/solarpanel">
-          <li className={`${style.list} cursor-pointer py-[4px] px-4`}>
+        <a href={PATHS.SOLAR_PANELS}>
+          <li className="hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 cursor-pointer py-[4px] px-4">
             Solar Panels
           </li>
         </a>
       </div>
       <div
-        className={`${style.menu} ${style.list} cursor-pointer z-100 font-medium px-3 py-[2px] rounded-[5px] lg:px-4 lg:text-sm lg:py-1 lg:font-bold`}
+        className="cursor-pointer z-100 font-medium px-3 py-[2px] rounded-[5px] lg:px-4 lg:text-sm lg:py-1 lg:font-bold hover:backdrop-blur-[13px] hover:bg-[#383f4d]/10 hover:rounded-[5px] transition duration-300 max-[1200px]:bg-tesla-dark/10 max-[1200px]:backdrop-blur-[13px] max-[1200px]:font-semibold max-[480px]:font-medium"
         onClick={() => {
           dispatch(toggleSideMenu());
         }}
@@ -82,10 +82,10 @@ const Navbar = ({ fixed, white }) => {
         Menu
       </div>
       <div
-        className={`${style.sidemenu} ${!isSideMenuOpen ? `translate-x-[100%]` : `translate-x-0`} transition-all duration-1000 fixed w-[240px] h-screen top-0 right-0 bottom-0 lg:w-[300px]`}
+        className={`${!isSideMenuOpen ? `translate-x-[100%]` : `translate-x-0`} transition-all duration-1000 fixed w-[240px] h-screen top-0 right-0 bottom-0 lg:w-[300px] bg-white/50 backdrop-blur-[10px]`}
       >
         <div
-          className={` ${style.close} h-[30px] w-[30px] p-2 rounded-[50%] absolute top-6 right-16 lg:h-[35px] lg:w-[35px]`}
+          className="h-[30px] w-[30px] p-2 rounded-[50%] absolute top-6 right-16 lg:h-[35px] lg:w-[35px] border border-black transition duration-1000"
           onClick={() => {
             dispatch(setSideMenuOpen(false));
           }}
@@ -93,37 +93,37 @@ const Navbar = ({ fixed, white }) => {
           <Image src="/close.svg" alt="close-icon" width={30} height={30} />
         </div>
         <div className={`absolute top-16 left-10`}>
-          <a href="/models">
+          <a href={PATHS.MODEL_S}>
             <li className={`py-[4px] font-medium cursor-pointer lg:py-[6px]`}>
               Model S
             </li>
           </a>
-          <a href="/model3">
+          <a href={PATHS.MODEL_3}>
             <li className={`py-[4px] font-medium cursor-pointer lg:py-[6px]`}>
               Model 3
             </li>
           </a>
-          <a href="/modelx">
+          <a href={PATHS.MODEL_X}>
             <li className={`py-[4px] font-medium cursor-pointer lg:py-[6px]`}>
               Model X
             </li>
           </a>
-          <a href="/modely">
+          <a href={PATHS.MODEL_Y}>
             <li className={`py-[4px] font-medium cursor-pointer lg:py-[6px]`}>
               Model Y
             </li>
           </a>
-          <a href="/cybertruck">
+          <a href={PATHS.CYBERTRUCK}>
             <li className={`py-[4px] font-medium cursor-pointer lg:py-[6px]`}>
               Cybertruck
             </li>
           </a>
-          <a href="/solarroof">
+          <a href={PATHS.SOLAR_ROOF}>
             <li className={`py-[4px] font-medium cursor-pointer lg:py-[6px]`}>
               Solar Roof
             </li>
           </a>
-          <a href="/solarpanel">
+          <a href={PATHS.SOLAR_PANELS}>
             <li className={`py-[4px] font-medium cursor-pointer lg:py-[6px]`}>
               Solar Panels
             </li>

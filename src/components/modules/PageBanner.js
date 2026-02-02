@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import style from "@/styles/components.module.css";
 import useWindowSize from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbarbanner";
@@ -54,11 +53,11 @@ export const Banner = ({
           />
         )}
         <div
-          className={`${style.bannerpagedescription} ${white === "true" ? "text-white" : "text-black"}  absolute top-[15%] left-[50%]`}
+          className={`${white === "true" ? "text-white" : "text-black"}  absolute top-[15%] left-[50%] -translate-x-1/2 -translate-y-[15%] font-medium overflow-hidden text-center`}
         >
           <motion.h1
             variants={textVariant(1)}
-            className={`${style.bannerheading} text-3xl font-medium m-1 lg:text-4xl lg:my-[6px]`}
+            className="text-3xl m-1 lg:text-4xl lg:my-[6px] font-medium overflow-hidden text-center"
           >
             {title}
           </motion.h1>
@@ -73,7 +72,7 @@ export const Banner = ({
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
-          className={`${style.ordernow} overflow-hidden absolute w-[100%] text-white top-[60%] flex items-center flex-col justify-center mx-8 md:top-[80%] md:flex-row `}
+          className="max-[480px]:top-[70%] overflow-hidden absolute w-[100%] text-white top-[60%] flex items-center flex-col justify-center mx-8 md:top-[80%] md:flex-row "
         >
           <div className={`flex items-center overflow-hidden justify-center`}>
             <motion.div
