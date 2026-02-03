@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useCarousel } from "@/hooks/useCarousel";
 
 const Video = () => {
   const slides = [
@@ -7,7 +7,7 @@ const Video = () => {
       url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032660/Cinematic-Experience_zrovh6.mp4",
       heading: "Cinematic Experience",
       description:
-        "A 17” touchscreen with left-right tilt offers 2200 x 1300 resolution, true colors and exceptional responsiveness for gaming, movies and more.",
+        'A 17" touchscreen with left-right tilt offers 2200 x 1300 resolution, true colors and exceptional responsiveness for gaming, movies and more.',
     },
     {
       url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032622/Yoke-Steering_wlfnkw.mp4",
@@ -31,21 +31,11 @@ const Video = () => {
       url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770032632/Console-Grade-Gaming_elb6it.mp4",
       heading: "Console-Grade Gaming",
       description:
-        "Up to 10 teraflops of processing power unlock in-car gaming on-par with today’s newest consoles. Play from any seat with wireless controller and headset compatibility.",
+        "Up to 10 teraflops of processing power unlock in-car gaming on-par with today's newest consoles. Play from any seat with wireless controller and headset compatibility.",
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+  const { currentIndex, nextSlide, goToSlide } = useCarousel(slides.length);
 
   return (
     <div className="w-[100vw] h-[100%] transition-all duration-700">

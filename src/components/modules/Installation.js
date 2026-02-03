@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useCarousel } from "@/hooks/useCarousel";
 import { motion } from "framer-motion";
 import { textVariant } from "@/constants/motion";
 
@@ -22,13 +22,8 @@ const Features = ({
       url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770095201/poweron_j3osog.mp4",
     },
   ];
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+  const { currentIndex, nextSlide, goToSlide } = useCarousel(slides.length);
 
   return (
     <div className="bg-white py-8">
@@ -46,9 +41,7 @@ const Features = ({
 
         <div className="flex justify-center max-w-[90vw] mx-auto flex-wrap">
           <div
-            onClick={() => {
-              setCurrentIndex(0);
-            }}
+            onClick={() => goToSlide(0)}
             className={`bg-white cursor-pointer relative max-w-[250px] min-w-[170px] mb-4 mr-2 px-2 py-4 flex-1 border-black ${currentIndex === 0 ? "border-t-[2px]" : "border-t-[1px]"} transition-all duration-300 overflow-hidden sm:px-6`}
           >
             {currentIndex !== 0 && (
@@ -58,9 +51,7 @@ const Features = ({
             <p className="text-xs">{Feature1Description}</p>
           </div>
           <div
-            onClick={() => {
-              setCurrentIndex(1);
-            }}
+            onClick={() => goToSlide(1)}
             className={`bg-white cursor-pointer relative max-w-[250px] min-w-[170px] mb-4 mr-2 px-2 py-4 flex-1 border-black ${currentIndex === 1 ? "border-t-[2px]" : "border-t-[1px]"} transition-all duration-300 overflow-hidden sm:px-6`}
           >
             {currentIndex !== 1 && (
@@ -70,9 +61,7 @@ const Features = ({
             <p className="text-xs">{Feature2Description}</p>
           </div>
           <div
-            onClick={() => {
-              setCurrentIndex(2);
-            }}
+            onClick={() => goToSlide(2)}
             className={`bg-white cursor-pointer relative max-w-[250px] min-w-[170px] mb-4 mr-2 px-2 py-4 flex-1 border-black ${currentIndex === 2 ? "border-t-[2px]" : "border-t-[1px]"} transition-all duration-300 overflow-hidden sm:px-6`}
           >
             {currentIndex !== 2 && (

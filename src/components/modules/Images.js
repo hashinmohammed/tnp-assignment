@@ -1,6 +1,7 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
+import { useCarousel } from "@/hooks/useCarousel";
 
 const Video = () => {
   const slides = [
@@ -14,24 +15,14 @@ const Video = () => {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
+  const { currentIndex, nextSlide, goToSlide } = useCarousel(slides.length);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       nextSlide();
     }, 4000);
     return () => clearTimeout(timer);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   return (
     <div className="w-[100vw] h-[100%] transition-all duration-700 bg-white">
