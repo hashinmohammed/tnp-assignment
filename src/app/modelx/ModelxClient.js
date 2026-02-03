@@ -18,8 +18,8 @@ const ModelXClient = () => {
     <div className="overflow-y-auto bg-tesla-dark">
       <PageBanner
         title="Model X"
-        urlDesktop="/modelx/model-x.jpg"
-        urlMobile="/modelx/model-x-mobile.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770041186/model-x_d58hxe.jpg"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770041182/model-x-mobile_fdxg6n.jpg"
         description="Plaid"
         infoheading1="333 mi"
         infodescription1="Range (EPA est.)"
@@ -52,10 +52,10 @@ const ModelXClient = () => {
       <Carinfo
         carinfoheading1="Stay Connected"
         carinfodescription1="Instantly connect with multi-device Bluetooth, or fast charge devices with wireless and 36-watt USB-C charging."
-        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032609/stay-connected_izi9zj.jpg"
+        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770041184/stay-connected_yz8l1p.jpg"
         carinfoheading2="Sublime Sound"
         carinfodescription2="A 22-speaker, 960-watt audio system with Active Road Noise Reduction offers the best listening experience wherever you are."
-        carinfourl2="/modelx/sublime-sound.jpg"
+        carinfourl2="https://res.cloudinary.com/doqeslffo/image/upload/v1770041180/sublime-sound_wrrsjf.jpg"
         carinfoheading3="Room for Everything"
         carinfodescription3="With front and rear trunks and fold-flat seats you can fit your bike without taking the wheel off—and your luggage too."
         carinfourl3="https://res.cloudinary.com/doqeslffo/image/upload/v1770032611/room-for-everything_crfkps.jpg"
@@ -63,7 +63,7 @@ const ModelXClient = () => {
         reverse="false"
       />
       <Carinfobanner
-        urlDesktop="/modelx/model-x-grey.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770041186/model-x-grey_m1wtyz.jpg"
         infoheading1="1,020 hp"
         infodescription1="Peak Power"
         infoheading2="9.9s"
@@ -98,14 +98,14 @@ const ModelXClient = () => {
         epstatdescription23="Peak Power"
       />
       <Infovideo
-        url="/modelx/even-more-capable.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770041190/even-more-capable_geaoqj.jpg"
         semiheading="Utility"
         heading="Even More Capable"
         description="With ample storage and 5,000 lbs of towing capacity, Model X is built for maximum utility. Front doors open and close automatically, Falcon Wing rear doors allow for easier loading and a trailer hitch comes standard, so you can bring your gear with you wherever you go."
         video="false"
         reverse="true"
       />
-      <Carinfobanner urlDesktop="/modelx/model-x-wave.jpg" />
+      <Carinfobanner urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770041189/model-x-wave_tduiu7.jpg" />
       <Beyond
         Beyondheading="Designed for Efficiency"
         Beyondsemiheading="Exterior"
@@ -114,19 +114,19 @@ const ModelXClient = () => {
       />
       <Carinfo
         carinfoheading1="Relentless Performance"
-        carinfodescription1="Performance wheels and tires keep the SUV planted, transferring even more power down to the road."
-        carinfourl1="/modelx/relentless-performance.jpg"
+        carinfodescription1="Staggered, performance wheels and tires keep the car planted and help transfer maximum power down to the road."
+        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770041181/relentless-performance_gnwcad.jpg"
         carinfoheading2="Optimized Aerodynamics"
-        carinfodescription2="Attention to detail on all exterior surfaces makes Model X the most aerodynamic production SUV on Earth."
-        carinfourl2="/modelx/optimized-aerodynamics.jpg"
+        carinfodescription2="Attention to detail on all exterior surfaces makes Model X the most aerodynamic production car on Earth."
+        carinfourl2="https://res.cloudinary.com/doqeslffo/image/upload/v1770041183/optimized-aerodynamics_liqwtf.jpg"
         carinfoheading3="Refined Styling"
         carinfodescription3="Exterior design combines an iconic look with elegant details."
-        carinfourl3="/modelx/refined-styling.jpg"
+        carinfourl3="https://res.cloudinary.com/doqeslffo/image/upload/v1770041181/refined-styling_jzeljv.jpg"
         video="false"
         reverse="true"
       />
       <Infovideo
-        url="/modelx/go-anywhere.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770041189/go-anywhere_wlj4xi.jpg"
         semiheading="Range"
         heading="Go Anywhere"
         description="With up to 348 miles of estimated range and access to the world’s largest and most powerful fast charging network, you’ll spend less time plugged in and more time on the road. Chat with a Tesla Advisor to learn more about Model X or schedule a demo drive today."
@@ -155,7 +155,7 @@ const ModelXClient = () => {
       <Specs />
       <Ordernow
         Ordernowheading="Model S"
-        url="/modelx/modelx-ordernow.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770041182/modelx-ordernow_xvrzcl.jpg"
         black="false"
       />
     </div>

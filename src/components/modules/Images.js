@@ -5,11 +5,11 @@ import Image from "next/image";
 const Video = () => {
   const slides = [
     {
-      url: "/modely/model-y-versatile.jpg",
-      description: "Versatile seating and storage for cargo and passengers",
+      url: "https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y-versatile_hbitsi.jpg",
+      heading: "Versatile Utility",
     },
     {
-      url: "/modely/model-y-room.jpg",
+      url: "https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y-room_lufm9k.jpg",
       description: "Room for up to seven with optional third row",
     },
   ];

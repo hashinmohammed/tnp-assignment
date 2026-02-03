@@ -12,9 +12,15 @@ const Features = ({
   Feature3Description,
 }) => {
   const slides = [
-    { url: "/solarroof/design.webm" },
-    { url: "/solarroof/installation.webm" },
-    { url: "/solarroof/poweron.mp4" },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770095205/design_jhqruf.webm",
+    },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770095223/installation_fvirdp.webm",
+    },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/video/upload/v1770095201/poweron_j3osog.mp4",
+    },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 

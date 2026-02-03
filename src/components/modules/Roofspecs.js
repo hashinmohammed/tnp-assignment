@@ -9,7 +9,7 @@ const Roofspecs = () => {
       <div>
         <Image
           className="md:w-[800px] h-auto"
-          src="/solarroof/roof.png"
+          src="https://res.cloudinary.com/doqeslffo/image/upload/v1770095199/roof_rrhu8j.png"
           alt="car-specs"
           width={800}
           height={450}

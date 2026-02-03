@@ -22,26 +22,28 @@ const VehiclesClient = () => {
   }, [activeCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-tesla-dark text-white">
-      <Navbar fixed={true} white={"false"} />
-      <div className="pt-24 pb-12 px-6 lg:px-16 max-w-[1440px] mx-auto">
-        <h1 className="text-4xl font-medium mb-2 text-center">Our Lineup</h1>
-        <p className="text-gray-400 text-center mb-12">
+    <div className="min-h-screen bg-white text-gray-900">
+      <Navbar fixed={true} white={"true"} />
+      <div className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-16 max-w-[1440px] mx-auto">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium mb-2 text-center">
+          Our Lineup
+        </h1>
+        <p className="text-sm sm:text-base text-gray-600 text-center mb-8 sm:mb-12 px-4">
           Explore our range of electric vehicles and energy products
         </p>
 
         {/* Search and Filter Controls */}
-        <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12 items-stretch md:items-center justify-between">
           {/* Category Tabs */}
-          <div className="flex gap-2 p-1 bg-white/5 rounded-lg backdrop-blur-sm overflow-x-auto max-w-full">
+          <div className="flex gap-2 p-1 bg-gray-100 rounded-lg overflow-x-auto w-full md:w-auto scrollbar-hide">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-md text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
                   activeCategory === category
-                    ? "bg-white text-black shadow-lg"
-                    : "text-gray-300 hover:text-white hover:bg-white/10"
+                    ? "bg-black text-white shadow-lg"
+                    : "text-gray-600 hover:text-black hover:bg-gray-200 active:bg-gray-300"
                 }`}
               >
                 {category}
@@ -56,7 +58,7 @@ const VehiclesClient = () => {
               placeholder="Search by model name..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-white/30 text-white placeholder-gray-500 backdrop-blur-sm transition-colors"
+              className="w-full pl-10 pr-4 py-2.5 sm:py-2 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600 text-sm sm:text-base text-gray-900 placeholder-gray-500 transition-colors"
             />
             <svg
               className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500"
@@ -76,20 +78,20 @@ const VehiclesClient = () => {
 
         {/* Results Grid */}
         {filteredVehicles.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {filteredVehicles.map((info) => (
               <VehicleCard
                 key={info.id}
                 title={info.title}
                 description={info.description}
                 imageUrl={info.urlDesktop}
-                dark={true}
+                dark={false}
               />
             ))}
           </div>
         ) : (
-          <div className="text-center py-20">
-            <p className="text-xl text-gray-400">
+          <div className="text-center py-12 sm:py-20 px-4">
+            <p className="text-lg sm:text-xl text-gray-600 mb-2">
               No results found matching your criteria
             </p>
             <button
@@ -97,7 +99,7 @@ const VehiclesClient = () => {
                 setSearchQuery("");
                 setActiveCategory("All");
               }}
-              className="mt-4 text-blue-400 hover:text-blue-300 underline"
+              className="mt-4 text-sm sm:text-base text-blue-600 hover:text-blue-700 underline active:text-blue-800 py-2 px-4"
             >
               Clear filters
             </button>
