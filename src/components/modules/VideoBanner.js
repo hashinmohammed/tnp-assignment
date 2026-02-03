@@ -23,9 +23,9 @@ export const VideoBanner = ({ title, videoSource, description, underline }) => {
         muted
         loop
         playsInline
-      >
-        <source src={videoSource} type="video/webm" />
-      </video>
+        src={videoSource}
+        suppressHydrationWarning
+      />
       <div className="absolute top-[20%] left-[50%] -translate-x-1/2 -translate-y-[20%] text-center font-medium overflow-hidden">
         <motion.h1
           variants={textVariant(1)}

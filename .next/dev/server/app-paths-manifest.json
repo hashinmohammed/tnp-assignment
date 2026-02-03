@@ -1,3 +1,5 @@
 {
+  "/model3/page": "app/model3/page.js",
+  "/modelx/page": "app/modelx/page.js",
   "/page": "app/page.js"
 }
