@@ -1,3 +1,54 @@
-[00:00:00.764] Server  LOG     ✓ Ready in 523ms
-[00:00:04.073] Server  LOG     ○ Compiling / ...
-[00:00:31.141] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.930] Server  LOG     ✓ Ready in 639ms
+[00:00:15.331] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:34.448] Server  ERROR   TypeError: fetch failed
+[00:00:42.119] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/model-3_yblr0i.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:49.049] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:00:49.062] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/model-3_yblr0i.jpg"
+[00:00:49.068] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s_ixzopm.jpg"
+[00:00:49.845] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/model-x_mvb2ge.jpg"
+[00:00:49.853] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg"
+[00:00:49.855] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/solarpanels_rd4rfk.jpg"
+[00:00:56.152] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:00:56.164] Server  ERROR   ⨯ "upstream image response timed out for" "https://res.cloudinary.com/doqeslffo/image/upload/v1770028688/solarroof_yhn4qi.jpg"
+[00:02:05.106] Server  LOG     ✓ Compiled in 413ms
+[00:02:23.829] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:02:26.254] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:02:31.175] Server  ERROR   TimeoutError: The operation was aborted due to timeout

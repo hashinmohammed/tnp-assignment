@@ -1,9 +1,29 @@
+"use client";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/layout/Navbarbanner";
-import { Bannerinfos } from "@/constants/data";
 import Banner from "@/components/modules/banners/Banner";
 import VideoBanner from "@/components/modules/banners/VideoBanner";
 
 const Hero = () => {
+  const [banners, setBanners] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("/api/products");
+        const data = await res.json();
+        setBanners(data);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <div>
       <Navbar fixed={true} white={"false"} />
@@ -14,19 +34,23 @@ const Hero = () => {
           description="Schedule a Demo Drive"
           underline={true}
         />
-        {Bannerinfos.map((Bannerinfo) => {
-          return (
+        {loading ? (
+          <div className="h-screen w-screen flex items-center justify-center bg-black text-white snap-start">
+            <p>Loading Vehicles...</p>
+          </div>
+        ) : (
+          banners.map((banner) => (
             <Banner
-              title={Bannerinfo.title}
-              key={Bannerinfo.id}
-              id={Bannerinfo.id}
-              urlDesktop={Bannerinfo.urlDesktop}
-              urlMobile={Bannerinfo.urlMobile}
-              description={Bannerinfo.description}
-              underline={Bannerinfo.underline}
+              title={banner.title}
+              key={banner.id}
+              id={banner.id}
+              urlDesktop={banner.url_desktop}
+              urlMobile={banner.url_mobile}
+              description={banner.description}
+              underline={banner.underline}
             />
-          );
-        })}
+          ))
+        )}
       </div>
     </div>
   );

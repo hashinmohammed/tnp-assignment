@@ -136,12 +136,9 @@ const VehicleCard = ({ title, description, imageUrl, dark, specs }) => {
               </div>
             )}
 
-            <div className="flex gap-2 sm:gap-3 mt-auto">
-              <button className="flex-1 py-2 sm:py-2.5 px-3 sm:px-4 rounded-md bg-[#3368ff] text-white text-xs sm:text-sm font-medium hover:bg-blue-600 active:bg-blue-700 transition-colors">
-                Order Now
-              </button>
+            <div className="mt-auto">
               <button
-                className={`flex-1 py-2 sm:py-2.5 px-3 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
+                className={`w-full py-2 sm:py-2.5 px-3 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                   dark
                     ? "bg-white/10 text-white hover:bg-white/20 active:bg-white/30 backdrop-blur-sm"
                     : "bg-gray-200 text-gray-900 hover:bg-gray-300 active:bg-gray-400"

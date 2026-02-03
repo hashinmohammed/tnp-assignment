@@ -1,9 +1,42 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Roof1_Specs, Roof2_Specs } from "@/constants/data";
 
 const Roofspecs = () => {
+  const [data, setData] = useState({
+    group1: [],
+    group2: [],
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/specs?model=Solar Roof");
+        const allSpecs = await res.json();
+
+        setData({
+          group1: allSpecs.filter((s) => s.column_group === 1),
+          group2: allSpecs.filter((s) => s.column_group === 2),
+        });
+      } catch (error) {
+        console.error("Failed to fetch roof specs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20 text-white">
+        Loading Specs...
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col lg:flex-row">
       <div>
@@ -21,24 +54,20 @@ const Roofspecs = () => {
         </h1>
         <div className="flex items-center justify-center mt-6">
           <div className="text-white flex flex-col w-[140px] justify-evenly mx-4 lg:w-[170px]">
-            {Roof1_Specs.map((Roof1_Spec) => {
-              return (
-                <div key={Roof1_Spec.id} className="my-3">
-                  <h1 className="font-bold text-xl">{Roof1_Spec.heading}</h1>
-                  <p className="text-sm">{Roof1_Spec.description}</p>
-                </div>
-              );
-            })}
+            {data.group1.map((spec) => (
+              <div key={spec.id} className="my-3">
+                <h1 className="font-bold text-xl">{spec.heading}</h1>
+                <p className="text-sm">{spec.description}</p>
+              </div>
+            ))}
           </div>
           <div className="text-white flex flex-col w-[140px] justify-evenly mx-4 lg:w-[170px]">
-            {Roof2_Specs.map((Roof2_Spec) => {
-              return (
-                <div key={Roof2_Spec.id} className="my-3">
-                  <h1 className="font-bold text-xl">{Roof2_Spec.heading}</h1>
-                  <p className="text-sm">{Roof2_Spec.description}</p>
-                </div>
-              );
-            })}
+            {data.group2.map((spec) => (
+              <div key={spec.id} className="my-3">
+                <h1 className="font-bold text-xl">{spec.heading}</h1>
+                <p className="text-sm">{spec.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
