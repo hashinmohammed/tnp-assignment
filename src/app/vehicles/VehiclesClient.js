@@ -86,6 +86,7 @@ const VehiclesClient = () => {
                 description={info.description}
                 imageUrl={info.urlDesktop}
                 dark={false}
+                specs={info.specs}
               />
             ))}
           </div>

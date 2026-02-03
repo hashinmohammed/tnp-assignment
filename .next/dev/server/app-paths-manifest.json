@@ -1,8 +1,4 @@
 {
-  "/models/page": "app/models/page.js",
-  "/modely/page": "app/modely/page.js",
-  "/page": "app/page.js",
-  "/solarpanel/page": "app/solarpanel/page.js",
-  "/solarroof/page": "app/solarroof/page.js",
-  "/vehicles/page": "app/vehicles/page.js"
+  "/model3/page": "app/model3/page.js",
+  "/page": "app/page.js"
 }

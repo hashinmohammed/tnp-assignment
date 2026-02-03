@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
-const VehicleCard = ({ title, description, imageUrl, dark }) => {
+const VehicleCard = ({ title, description, imageUrl, dark, specs }) => {
   const { ref, hasBeenVisible } = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: "100px",
@@ -41,13 +41,101 @@ const VehicleCard = ({ title, description, imageUrl, dark }) => {
             </h3>
             {description && (
               <p
-                className={`text-xs sm:text-sm mb-4 sm:mb-6 flex-grow ${
+                className={`text-xs sm:text-sm mb-3 sm:mb-4 ${
                   dark ? "text-gray-300" : "text-gray-600"
                 }`}
               >
                 {description}
               </p>
             )}
+
+            {/* Specs Grid */}
+            {specs && (
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-5">
+                {specs.range && (
+                  <div
+                    className={`p-2 sm:p-3 rounded-lg ${
+                      dark ? "bg-white/5" : "bg-white"
+                    }`}
+                  >
+                    <p
+                      className={`text-[10px] sm:text-xs ${
+                        dark ? "text-gray-400" : "text-gray-500"
+                      } mb-0.5`}
+                    >
+                      Range
+                    </p>
+                    <p
+                      className={`text-sm sm:text-base font-semibold ${
+                        dark ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {specs.range}
+                    </p>
+                  </div>
+                )}
+                {specs.topSpeed && (
+                  <div
+                    className={`p-2 sm:p-3 rounded-lg ${
+                      dark ? "bg-white/5" : "bg-white"
+                    }`}
+                  >
+                    <p
+                      className={`text-[10px] sm:text-xs ${
+                        dark ? "text-gray-400" : "text-gray-500"
+                      } mb-0.5`}
+                    >
+                      Top Speed
+                    </p>
+                    <p
+                      className={`text-sm sm:text-base font-semibold ${
+                        dark ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {specs.topSpeed}
+                    </p>
+                  </div>
+                )}
+                {specs.acceleration && (
+                  <div
+                    className={`p-2 sm:p-3 rounded-lg ${
+                      dark ? "bg-white/5" : "bg-white"
+                    }`}
+                  >
+                    <p
+                      className={`text-[10px] sm:text-xs ${
+                        dark ? "text-gray-400" : "text-gray-500"
+                      } mb-0.5`}
+                    >
+                      0-60 mph
+                    </p>
+                    <p
+                      className={`text-sm sm:text-base font-semibold ${
+                        dark ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {specs.acceleration}
+                    </p>
+                  </div>
+                )}
+                {specs.price && (
+                  <div
+                    className={`p-2 sm:p-3 rounded-lg ${
+                      dark ? "bg-white/5" : "bg-white"
+                    } col-span-2`}
+                  >
+                    <p
+                      className={`text-xs sm:text-sm font-medium ${
+                        dark ? "text-gray-300" : "text-gray-700"
+                      }`}
+                    >
+                      {specs.price}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
             <div className="flex gap-2 sm:gap-3 mt-auto">
               <button className="flex-1 py-2 sm:py-2.5 px-3 sm:px-4 rounded-md bg-[#3368ff] text-white text-xs sm:text-sm font-medium hover:bg-blue-600 active:bg-blue-700 transition-colors">
                 Order Now
@@ -65,7 +153,7 @@ const VehicleCard = ({ title, description, imageUrl, dark }) => {
           </div>
         </>
       ) : (
-        <div className="h-full min-h-[300px] sm:min-h-[340px] flex items-center justify-center">
+        <div className="h-full min-h-[300px] sm:min-h-[380px] flex items-center justify-center">
           <div className="animate-pulse">
             <div
               className={`h-4 w-32 rounded ${dark ? "bg-gray-700" : "bg-gray-300"}`}

@@ -1,5 +1,54 @@
-[00:00:01.057] Server  LOG     ✓ Ready in 792ms
-[00:00:04.421] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.633] Server  LOG     ✓ Ready in 491ms
+[00:00:03.945] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <motion.div className="snap-start..." variants={function staggerContainer} initial="hidden" ...>
+                                <div className="snap-start..." style={{}} ref={function useMotionRef.useCallback}>
+                                  <video
+                                    className="w-full h-full object-cover"
+                                    autoPlay={true}
+                                    muted={true}
+                                    loop={true}
+                                    playsInline={true}
+-                                   data-video="0"
+                                  >
+                                  ...
+                  ...
+
+[00:00:09.627] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -41,502 +90,80 @@ It can also happen if the client has a browser extension installed which messes 
                 ...
               ...
 
-[00:00:26.616] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032618/model-s-specs_wynrka.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:46.192] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:50.992] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:00:55.947] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032615/optimized-aerodynamics_vckwbj.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:55.948] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032614/refined-styling_lhxn42.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:57.663] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032618/model-s-specs_wynrka.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:01:04.035] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <LoadingBoundary name="/" loading={null}>
-      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-          <RedirectBoundary>
-            <RedirectErrorBoundary router={{...}}>
-              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
-                <SegmentViewNode type="page" pagePath="page.js">
-                  <SegmentTrieNode>
-                  <Home>
-                    <Hero>
-                      <div>
-                        <Navbar>
-                        <div className="snap-y sna...">
-                          <VideoBanner title="Tesla" videoSource="https://re..." description="Schedule a..." ...>
-                            <motion.div className="snap-start..." variants={function staggerContainer} initial="hidden" ...>
-                              <div className="snap-start..." style={{}} ref={function useMotionRef.useCallback}>
-                                <video
-                                  className="w-full h-full object-cover"
-                                  autoPlay={true}
-                                  muted={true}
-                                  loop={true}
-                                  playsInline={true}
--                                 data-video="0"
-                                >
-                                ...
-                          ...
-                ...
-              ...
-
-[00:09:17.970] Server  LOG     ✓ Compiled in 305.1s
-[00:09:29.200] Server  LOG     ✓ Compiled in 2.4s
-[00:11:52.951] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-        <LoadingBoundary name="solarroof/" loading={null}>
-          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
-            <RedirectBoundary>
-              <RedirectErrorBoundary router={{...}}>
-                <InnerLayoutRouter url="/solarroof" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
-                  <SegmentViewNode type="page" pagePath="solarroof/...">
-                    <SegmentTrieNode>
-                    <Solarroof>
-                      <div className="overflow-y...">
-                        <Banner>
-                        <Carinfobanner>
-                        <Beyond>
-                        <Infovideo>
-                        <Infovideo>
-                        <Beyond>
-                        <Features Feature1="Design" Feature1Description="Aerial ima..." Feature2="Installation" ...>
-                          <div className="bg-white py-8">
-                            <div>
-                              <div className="max-w-[90v...">
-                                <video
-                                  className="object-contain w-[100%] h-[100%]"
-                                  autoPlay={true}
-                                  muted={true}
-                                  src="https://res.cloudinary.com/doqeslffo/video/upload/v1770095205/design_jhqruf.webm"
-                                  onEnded={function onEnded}
-                                  alt="model-s-battery"
--                                 data-video="1"
-                                >
-                              ...
-                        <Infovideo>
-                        <Carinfobanner>
-                        <Beyond>
-                        <Infovideo>
-                        <Roofspecs>
-                          <div className="flex flex-...">
-                            <div>
-                              <img
-                                alt="car-specs"
-                                fetchPriority={undefined}
-                                loading="lazy"
-                                width={800}
-                                height={450}
-                                decoding="async"
-                                data-nimg="1"
-                                className="md:w-[800px] h-auto"
-                                style={{color:"transparent"}}
-                                sizes={undefined}
-+                               srcSet={"/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdoqeslffo%2Fimage%2Fuplo..."}
--                               srcSet={"/_next/image?url=%2Fsolarroof%2Froof.png&w=828&q=75 1x, /_next/image?url=%2F..."}
-+                               src={"/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdoqeslffo%2Fimage%2Fupload%..."}
--                               src={"/_next/image?url=%2Fsolarroof%2Froof.png&w=1920&q=75"}
-                                ref={function}
-                                onLoad={function onLoad}
-                                onError={function onError}
-                              >
-                            ...
-                  ...
-                ...
-      ...
-
-[00:11:58.710] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:12:05.363] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:12:08.025] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032615/optimized-aerodynamics_vckwbj.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:12:08.175] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032614/refined-styling_lhxn42.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:12:53.414] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032618/model-s-specs_wynrka.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:13:10.891] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <head>
-                          <body
--                           cz-shortcut-listen="true"
-                          >
-                  ...
-
-[00:13:10.891] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:14:41.921] Server  LOG     ✓ Compiled in 20s
-[00:16:17.293] Server  LOG     ✓ Compiled in 95.3s
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/model-3_yblr0i.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s_ixzopm.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/model-x_mvb2ge.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/solarpanels_rd4rfk.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028688/solarroof_yhn4qi.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:16:20.338] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/accessories_w9ajv3.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <head>
-                          <body
--                           cz-shortcut-listen="true"
-                          >
-                  ...
-
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/model-3_yblr0i.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s_ixzopm.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/model-x_mvb2ge.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/solarpanels_rd4rfk.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028688/solarroof_yhn4qi.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:17:17.634] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/accessories_w9ajv3.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:20:18.440] Server  LOG     ✓ Compiled in 181.1s
-[00:20:20.976] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <head>
-                          <body
--                           cz-shortcut-listen="true"
-                          >
-                  ...
-
-[00:20:21.350] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:20:55.076] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/vehicles" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <head>
-                          <body
--                           cz-shortcut-listen="true"
-                          >
-                  ...
-
-[00:20:55.315] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:21:19.550] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:22:59.673] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/models" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <head>
-                          <body
--                           cz-shortcut-listen="true"
-                          >
-                  ...
-
-[00:22:59.673] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[00:23:03.924] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032615/optimized-aerodynamics_vckwbj.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:23:04.204] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032614/refined-styling_lhxn42.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:23:07.369] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032618/model-s-specs_wynrka.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:23:16.289] Server  LOG     ✓ Compiled in 11.9s
-[00:23:16.812] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-        <LoadingBoundary name="solarroof/" loading={null}>
-          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
-            <RedirectBoundary>
-              <RedirectErrorBoundary router={{...}}>
-                <InnerLayoutRouter url="/solarroof" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
-                  <SegmentViewNode type="page" pagePath="solarroof/...">
-                    <SegmentTrieNode>
-                    <Solarroof>
-                      <div className="overflow-y...">
-                        <Banner>
-                        <Carinfobanner>
-                        <Beyond>
-                        <Infovideo>
-                        <Infovideo>
-                        <Beyond>
-                        <Features Feature1="Design" Feature1Description="Aerial ima..." Feature2="Installation" ...>
-                          <div className="bg-white py-8">
-                            <div>
-                              <div className="max-w-[90v...">
-                                <video
-                                  className="object-contain w-[100%] h-[100%]"
-                                  autoPlay={true}
-                                  muted={true}
-                                  src="https://res.cloudinary.com/doqeslffo/video/upload/v1770095205/design_jhqruf.webm"
-                                  onEnded={function onEnded}
-                                  alt="model-s-battery"
--                                 data-video="1"
-                                >
-                              ...
-                        <Infovideo>
-                        <Carinfobanner>
-                        <Beyond>
-                        <Infovideo>
-                        <Roofspecs>
-                          <div className="flex flex-...">
-                            <div>
-                              <img
-                                alt="car-specs"
-                                fetchPriority={undefined}
-                                loading="lazy"
-                                width={800}
-                                height={450}
-                                decoding="async"
-                                data-nimg="1"
-                                className="md:w-[800px] h-auto"
-                                style={{color:"transparent"}}
-                                sizes={undefined}
-+                               srcSet={"/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdoqeslffo%2Fimage%2Fuplo..."}
--                               srcSet={"/_next/image?url=%2Fsolarroof%2Froof.png&w=828&q=75 1x, /_next/image?url=%2F..."}
-+                               src={"/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdoqeslffo%2Fimage%2Fupload%..."}
--                               src={"/_next/image?url=%2Fsolarroof%2Froof.png&w=1920&q=75"}
-                                ref={function}
-                                onLoad={function onLoad}
-                                onError={function onError}
-                              >
-                            ...
-                  ...
-                ...
-      ...
-
-[00:23:18.704] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:23:33.303] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-        <LoadingBoundary name="solarroof/" loading={null}>
-          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
-            <RedirectBoundary>
-              <RedirectErrorBoundary router={{...}}>
-                <InnerLayoutRouter url="/solarroof" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
-                  <SegmentViewNode type="page" pagePath="solarroof/...">
-                    <SegmentTrieNode>
-                    <Solarroof>
-                      <div className="overflow-y...">
-                        <Banner>
-                        <Carinfobanner>
-                        <Beyond>
-                        <Infovideo>
-                        <Infovideo>
-                        <Beyond>
-                        <Features Feature1="Design" Feature1Description="Aerial ima..." Feature2="Installation" ...>
-                          <div className="bg-white py-8">
-                            <div>
-                              <div className="max-w-[90v...">
-                                <video
-                                  className="object-contain w-[100%] h-[100%]"
-                                  autoPlay={true}
-                                  muted={true}
-                                  src="https://res.cloudinary.com/doqeslffo/video/upload/v1770095205/design_jhqruf.webm"
-                                  onEnded={function onEnded}
-                                  alt="model-s-battery"
--                                 data-video="1"
-                                >
-                              ...
-                        <Infovideo>
-                        <Carinfobanner>
-                        <Beyond>
-                        <Infovideo>
-                        <Roofspecs>
-                          <div className="flex flex-...">
-                            <div>
-                              <img
-                                alt="car-specs"
-                                fetchPriority={undefined}
-                                loading="lazy"
-                                width={800}
-                                height={450}
-                                decoding="async"
-                                data-nimg="1"
-                                className="md:w-[800px] h-auto"
-                                style={{color:"transparent"}}
-                                sizes={undefined}
-+                               srcSet={"/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdoqeslffo%2Fimage%2Fuplo..."}
--                               srcSet={"/_next/image?url=%2Fsolarroof%2Froof.png&w=828&q=75 1x, /_next/image?url=%2F..."}
-+                               src={"/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdoqeslffo%2Fimage%2Fupload%..."}
--                               src={"/_next/image?url=%2Fsolarroof%2Froof.png&w=1920&q=75"}
-                                ref={function}
-                                onLoad={function onLoad}
-                                onError={function onError}
-                              >
-                            ...
-                  ...
-                ...
-      ...
-
-[00:23:36.413] Browser WARN    Image with src "/solarroof/roof.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:58.431] Browser LOG     Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:00:58.432] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:00:58.433] Browser LOG     Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:00:58.433] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:00:58.433] Browser LOG     Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:00:58.433] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:00:58.433] Browser LOG     Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:00:58.433] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:00:58.433] Browser LOG     Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:00:58.433] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:00:58.433] Browser LOG     Banner specs: undefined
+[00:00:58.433] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: undefined
+[00:00:58.433] Browser LOG     Banner specs: undefined
+[00:00:58.433] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: undefined
+[00:00:58.433] Browser LOG     Banner specs: undefined
+[00:00:58.433] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: undefined
+[00:00:59.018] Browser LOG     Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:00:59.018] Browser LOG     Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:00:59.018] Browser LOG     Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:00:59.018] Browser LOG     Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:00:59.018] Browser LOG     Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:00:59.018] Browser LOG     Banner specs: undefined
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: undefined
+[00:00:59.018] Browser LOG     Banner specs: undefined
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: undefined
+[00:00:59.018] Browser LOG     Banner specs: undefined
+[00:00:59.018] Browser LOG     [2;38;2;124;124;124m%s[0m Banner specs: undefined
+[00:01:24.352] Server  LOG     Banner specs: {}
+[00:01:24.361] Server  LOG     Banner specs: {}
+[00:01:24.365] Server  LOG     Banner specs: {}
+[00:01:24.367] Server  LOG     Banner specs: {}
+[00:01:24.370] Server  LOG     Banner specs: {}
+[00:01:24.375] Server  LOG     Banner specs: undefined
+[00:01:24.378] Server  LOG     Banner specs: undefined
+[00:01:24.379] Server  LOG     Banner specs: undefined
+[00:01:30.750] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:30.935] Browser LOG     Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"3.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.5 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"135 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 135 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"3.1s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds","drive":"AWD Dual","driveDesc":"Dual Motor All-Wheel Drive instantly controls traction and torque in all weather conditions","topSpeed":"162 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 162 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"1.99s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 1.99 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with torque vectoring provides unmatched performance and control","topSpeed":"200 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 200 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.5s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.5 seconds","drive":"Tri Motor","driveDesc":"Tri Motor All-Wheel Drive with Falcon Wing doors provides unmatched versatility","topSpeed":"155 mph","topSpeedDesc":"Improved handling and aerodynamics allow for a top speed of 155 mph"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:01:30.936] Browser LOG     Banner specs: {"acceleration":"2.6s","accelerationDesc":"Quickest acceleration—from zero to 60 mph* in as little as 2.6 seconds","drive":"AWD","driveDesc":"All-Wheel Drive with adaptive air suspension conquers any terrain","topSpeed":"112 mph","topSpeedDesc":"Exoskeleton design and powerful motors provide exceptional performance"}
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:01:30.936] Browser LOG     Banner specs: undefined
+[00:03:14.951] Server  LOG     ✓ Compiled in 190.8s
+[00:04:44.425] Server  LOG     ○ Compiling /model3 ...
+[00:06:51.589] Server  LOG     ✓ Compiled in 211.2s
+[00:06:54.652] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
