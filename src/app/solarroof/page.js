@@ -1,9 +1,9 @@
-import PageBanner from "@/components/modules/PageBanner";
-import Carinfobanner from "@/components/modules/Carinfobanner";
-import Beyond from "@/components/modules/Beyond";
-import Infovideo from "@/components/modules/Infovideo";
-import Installation from "@/components/modules/Installation";
-import Roofspecs from "@/components/modules/Roofspecs";
+import PageBanner from "@/components/modules/banners/PageBanner";
+import Carinfobanner from "@/components/modules/banners/Carinfobanner";
+import Beyond from "@/components/modules/features/Beyond";
+import Infovideo from "@/components/modules/media/Infovideo";
+import Installation from "@/components/modules/specs/Installation";
+import Roofspecs from "@/components/modules/specs/Roofspecs";
 
 export const metadata = {
   title: "Solar Roof | Tesla",

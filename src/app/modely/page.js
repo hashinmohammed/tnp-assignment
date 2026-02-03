@@ -1,10 +1,10 @@
-import PageBanner from "@/components/modules/PageBanner";
-import Infovideo from "@/components/modules/Infovideo";
-import Beyond from "@/components/modules/Beyond";
-import Image from "@/components/modules/Images";
-import Carinfobanner from "@/components/modules/Carinfobanner";
-import Specs from "@/components/modules/Specs";
-import Ordernow from "@/components/modules/Ordernow";
+import PageBanner from "@/components/modules/banners/PageBanner";
+import Infovideo from "@/components/modules/media/Infovideo";
+import Beyond from "@/components/modules/features/Beyond";
+import Image from "@/components/modules/media/Images";
+import Carinfobanner from "@/components/modules/banners/Carinfobanner";
+import Specs from "@/components/modules/specs/Specs";
+import Ordernow from "@/components/modules/actions/Ordernow";
 
 export const metadata = {
   title: "Model Y | Tesla",

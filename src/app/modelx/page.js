@@ -1,4 +1,4 @@
-import ModelXClient from "./ModelxClient";
+import ModelXClient from "./_components/ModelxClient";
 
 export const metadata = {
   title: "Model X | Tesla",

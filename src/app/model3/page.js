@@ -1,9 +1,9 @@
-import PageBanner from "@/components/modules/PageBanner";
-import Carinfobanner from "@/components/modules/Carinfobanner";
-import Beyond from "@/components/modules/Beyond";
-import Infovideo from "@/components/modules/Infovideo";
-import Specs from "@/components/modules/Specs";
-import Ordernow from "@/components/modules/Ordernow";
+import PageBanner from "@/components/modules/banners/PageBanner";
+import Carinfobanner from "@/components/modules/banners/Carinfobanner";
+import Beyond from "@/components/modules/features/Beyond";
+import Infovideo from "@/components/modules/media/Infovideo";
+import Specs from "@/components/modules/specs/Specs";
+import Ordernow from "@/components/modules/actions/Ordernow";
 
 export const metadata = {
   title: "Model 3 | Tesla",

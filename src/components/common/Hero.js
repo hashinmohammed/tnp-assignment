@@ -1,7 +1,7 @@
 import Navbar from "@/components/layout/Navbarbanner";
 import { Bannerinfos } from "@/constants/data";
-import Banner from "@/components/modules/Banner";
-import VideoBanner from "@/components/modules/VideoBanner";
+import Banner from "@/components/modules/banners/Banner";
+import VideoBanner from "@/components/modules/banners/VideoBanner";
 
 const Hero = () => {
   return (

@@ -1,4 +1,4 @@
-import VehiclesClient from "./VehiclesClient";
+import VehiclesClient from "./_components/VehiclesClient";
 
 export const metadata = {
   title: "All Vehicles | Tesla",
