@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Button = ({
   children,
-  variant = "primary", // 'primary' or 'secondary'
+  variant = "primary", 
   motionVariants,
   className = "",
   onClick,

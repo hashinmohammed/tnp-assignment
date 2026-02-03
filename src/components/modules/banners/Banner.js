@@ -11,6 +11,9 @@ import {
   buttonrightVariant,
 } from "@/constants/motion";
 
+import { useRouter } from "next/navigation";
+import { PATHS } from "@/constants/path";
+
 export const Banner = ({
   title,
   urlDesktop,
@@ -19,6 +22,8 @@ export const Banner = ({
   underline,
 }) => {
   const { width } = useWindowSize();
+  const router = useRouter();
+
   return (
     <motion.div
       className="snap-start h-screen relative overflow-hidden"
@@ -61,8 +66,12 @@ export const Banner = ({
         </motion.p>
       </div>
       <div className="absolute top-[80%] left-[50%] -translate-x-1/2 -translate-y-[80%] flex flex-col md:flex-row font-medium overflow-hidden text-center">
-        <Button motionVariants={buttonVariant(1.8)} variant="secondary">
-          Custom Order
+        <Button
+          motionVariants={buttonVariant(1.8)}
+          variant="secondary"
+          onClick={() => router.push(PATHS.VEHICLES)}
+        >
+          View All Products
         </Button>
         <Button motionVariants={buttonrightVariant(1.8)} variant="primary">
           View Inventory

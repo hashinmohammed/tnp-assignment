@@ -42,9 +42,6 @@ export const VideoBanner = ({ title, videoSource, description, underline }) => {
         </motion.p>
       </div>
       <div className="absolute top-[80%] left-[50%] -translate-x-1/2 -translate-y-[80%] flex flex-col md:flex-row font-medium overflow-hidden text-center">
-        <Button motionVariants={buttonVariant(1.8)} variant="secondary">
-          Custom Order
-        </Button>
         <Button motionVariants={buttonrightVariant(1.8)} variant="primary">
           View Inventory
         </Button>
