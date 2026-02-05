@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import VehicleCard from "@/components/modules/cards/VehicleCard";
+import SkeletonCard from "@/components/ui/SkeletonCard";
 import Navbar from "@/components/layout/Navbarbanner";
 
 const VehiclesClient = () => {
@@ -12,61 +13,73 @@ const VehiclesClient = () => {
   const categories = ["All", "Vehicles", "Energy", "Accessories"];
 
   useEffect(() => {
-    const fetchVehicles = async () => {
-      try {
-        const res = await fetch("/api/products");
-        const data = await res.json();
+    // Debounce search
+    const timer = setTimeout(() => {
+      const fetchVehicles = async () => {
+        setLoading(true);
+        try {
+          const params = new URLSearchParams();
+          if (activeCategory !== "All")
+            params.append("category", activeCategory);
+          if (searchQuery) params.append("search", searchQuery);
 
-        // Transform API data to match component structure
-        const transformedData = data.map((item) => ({
-          ...item,
-          urlDesktop: item.url_desktop,
-          urlMobile: item.url_mobile,
-          specs: {
-            range: item.range_val,
-            topSpeed: item.top_speed,
-            acceleration: item.acceleration,
-            price: item.price,
-          },
-        }));
+          const res = await fetch(`/api/products?${params.toString()}`);
+          const data = await res.json();
 
-        setVehicles(transformedData);
-      } catch (error) {
-        console.error("Failed to fetch vehicles:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+          // Transform API data to match component structure
+          const transformedData = data.map((item) => ({
+            ...item,
+            urlDesktop: item.url_desktop,
+            urlMobile: item.url_mobile,
+            specs: {
+              range: item.range_val,
+              topSpeed: item.top_speed,
+              acceleration: item.acceleration,
+              price: item.price,
+            },
+          }));
 
-    fetchVehicles();
-  }, []);
+          setVehicles(transformedData);
+        } catch (error) {
+          console.error("Failed to fetch vehicles:", error);
+        } finally {
+          setLoading(false);
+        }
+      };
 
-  const filteredVehicles = useMemo(() => {
-    return vehicles.filter((info) => {
-      const matchesCategory =
-        activeCategory === "All" || info.category === activeCategory;
-      const matchesSearch = info.title
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
-    });
-  }, [activeCategory, searchQuery, vehicles]);
+      fetchVehicles();
+    }, 300); // 300ms delay
+
+    return () => clearTimeout(timer);
+  }, [activeCategory, searchQuery]);
 
   if (loading) {
     return (
-      <div
-        className="min-h-screen bg-white flex items-center justify-center"
-        suppressHydrationWarning
-      >
-        <div className="animate-pulse flex flex-col items-center">
-          <svg
-            className="tds-icon tds-icon-logo-wordmark tds-site-logo-icon w-[200px]"
-            viewBox="0 0 342 35"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#000000"
-          >
-            <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"></path>
-          </svg>
+      <div className="min-h-screen bg-white text-gray-900">
+        <Navbar fixed={true} white={"true"} />
+        <div className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-16 max-w-[1440px] mx-auto">
+          {/* Header Skeleton */}
+          <div className="flex flex-col items-center mb-8 sm:mb-12">
+            <div className="h-8 sm:h-10 bg-gray-200 rounded w-48 mb-4 animate-pulse"></div>
+            <div className="h-4 sm:h-5 bg-gray-100 rounded w-64 animate-pulse"></div>
+          </div>
+
+          {/* Controls Skeleton */}
+          <div className="flex flex-col md:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12 items-stretch md:items-center justify-between animate-pulse">
+            <div className="flex gap-2">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="h-8 w-20 bg-gray-200 rounded-md"></div>
+              ))}
+            </div>
+            <div className="h-10 w-full md:w-80 bg-gray-200 rounded-lg"></div>
+          </div>
+
+          {/* Cards Grid Skeleton */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <SkeletonCard key={i} />
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -128,9 +141,9 @@ const VehiclesClient = () => {
         </div>
 
         {/* Results Grid */}
-        {filteredVehicles.length > 0 ? (
+        {vehicles.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {filteredVehicles.map((info) => (
+            {vehicles.map((info) => (
               <VehicleCard
                 key={info.id}
                 title={info.title}
@@ -138,6 +151,7 @@ const VehiclesClient = () => {
                 imageUrl={info.urlDesktop}
                 dark={false}
                 specs={info.specs}
+                slug={info.slug}
               />
             ))}
           </div>

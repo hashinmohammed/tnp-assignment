@@ -20,6 +20,10 @@ export const Banner = ({
   urlMobile,
   description,
   underline,
+  range,
+  topSpeed,
+  acceleration,
+  slug,
 }) => {
   const { width } = useWindowSize();
   const router = useRouter();
@@ -65,17 +69,62 @@ export const Banner = ({
           {description}
         </motion.p>
       </div>
-      <div className="absolute top-[80%] left-[50%] -translate-x-1/2 -translate-y-[80%] flex flex-col md:flex-row font-medium overflow-hidden text-center">
-        <Button
-          motionVariants={buttonVariant(1.8)}
-          variant="secondary"
-          onClick={() => router.push(PATHS.VEHICLES)}
-        >
-          View All Products
-        </Button>
-        <Button motionVariants={buttonrightVariant(1.8)} variant="primary">
-          View Inventory
-        </Button>
+      <div className="absolute top-[80%] left-[50%] -translate-x-1/2 -translate-y-[80%] flex flex-col items-center font-medium overflow-hidden text-center w-full">
+        {/* Specs Section */}
+        {(range || topSpeed || acceleration) && (
+          <motion.div
+            variants={textVariant(2)}
+            className="flex gap-8 md:gap-12 text-white items-center justify-center pb-6 md:pb-8"
+          >
+            {range && (
+              <div className="flex flex-col items-center">
+                <span className="text-xl md:text-2xl font-semibold">
+                  {range}
+                </span>
+                <span className="text-[10px] md:text-xs font-medium">
+                  Range (EPA est.)
+                </span>
+              </div>
+            )}
+            {topSpeed && (
+              <div className="flex flex-col items-center">
+                <span className="text-xl md:text-2xl font-semibold">
+                  {topSpeed}
+                </span>
+                <span className="text-[10px] md:text-xs font-medium">
+                  Top Speed
+                </span>
+              </div>
+            )}
+            {acceleration && (
+              <div className="flex flex-col items-center">
+                <span className="text-xl md:text-2xl font-semibold">
+                  {acceleration}
+                </span>
+                <span className="text-[10px] md:text-xs font-medium">
+                  0-60 mph
+                </span>
+              </div>
+            )}
+          </motion.div>
+        )}
+
+        <div className="flex flex-col md:flex-row gap-4">
+          <Button
+            motionVariants={buttonVariant(1.8)}
+            variant="secondary"
+            onClick={() => router.push(PATHS.VEHICLES)}
+          >
+            View All Products
+          </Button>
+          <Button
+            motionVariants={buttonrightVariant(1.8)}
+            variant="primary"
+            onClick={() => router.push(`${PATHS.VEHICLES}/${slug}`)}
+          >
+            View Inventory
+          </Button>
+        </div>
       </div>
     </motion.div>
   );

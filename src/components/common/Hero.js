@@ -48,6 +48,10 @@ const Hero = () => {
               urlMobile={banner.url_mobile}
               description={banner.description}
               underline={banner.underline}
+              range={banner.range_val}
+              topSpeed={banner.top_speed}
+              acceleration={banner.acceleration}
+              slug={banner.slug}
             />
           ))
         )}

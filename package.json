@@ -12,10 +12,14 @@
     "@next/font": "13.1.1",
     "@reduxjs/toolkit": "^2.11.2",
     "framer-motion": "^12.29.2",
+    "mysql2": "^3.16.3",
     "next": "^16.1.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "react-virtualized-auto-sizer": "^2.0.2",
+    "react-window": "^2.2.6",
+    "react-window-infinite-loader": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

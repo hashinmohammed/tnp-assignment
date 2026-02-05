@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Layout from "@/components/layout/Layout";
+
 import { Providers } from "../lib/providers";
 
 export const metadata = {
@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Providers>
-          <Layout>{children}</Layout>
-        </Providers>
+        <main>
+          <Providers>{children}</Providers>
+        </main>
       </body>
     </html>
   );
