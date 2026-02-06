@@ -1,3 +1,8 @@
 [00:00:00.764] Server  LOG     ✓ Ready in 523ms
 [00:00:04.073] Server  LOG     ○ Compiling / ...
 [00:00:31.141] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:14.116] Server  LOG     ○ Compiling /_not-found/page ...
+[00:10:15.383] Server  LOG     ✓ Compiled in 4.4s
+[00:10:16.106] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:16.265] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:16.474] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
