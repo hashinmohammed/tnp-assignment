@@ -1,15 +1,54 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import {
-  ModelSPlaid1_Specs,
-  ModelSPlaid2_Specs,
-  ModelS1_Specs,
-  ModelS2_Specs,
-} from "@/constants/data";
 
 const Specs = () => {
   const [specs, setSpecs] = useState(0);
+  const [data, setData] = useState({
+    plaidGroup1: [],
+    plaidGroup2: [],
+    modelSGroup1: [],
+    modelSGroup2: [],
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/specs");
+        const allSpecs = await res.json();
+
+        setData({
+          plaidGroup1: allSpecs.filter(
+            (s) => s.model_name === "Model S Plaid" && s.column_group === 1,
+          ),
+          plaidGroup2: allSpecs.filter(
+            (s) => s.model_name === "Model S Plaid" && s.column_group === 2,
+          ),
+          modelSGroup1: allSpecs.filter(
+            (s) => s.model_name === "Model S" && s.column_group === 1,
+          ),
+          modelSGroup2: allSpecs.filter(
+            (s) => s.model_name === "Model S" && s.column_group === 2,
+          ),
+        });
+      } catch (error) {
+        console.error("Failed to fetch specs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20 text-white">
+        Loading Specs...
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col lg:flex-row">
@@ -47,25 +86,21 @@ const Specs = () => {
         {specs === 0 && (
           <div className="flex items-center justify-center">
             <div className="text-white flex flex-col w-[140px] justify-evenly mx-4 lg:w-[170px]">
-              {ModelSPlaid1_Specs.map((ModelSPlaid1_Spec) => {
+              {data.plaidGroup1.map((spec) => {
                 return (
-                  <div key={ModelSPlaid1_Spec.id} className="my-3">
-                    <h1 className="font-bold text-xl">
-                      {ModelSPlaid1_Spec.heading}
-                    </h1>
-                    <p className="text-sm">{ModelSPlaid1_Spec.description}</p>
+                  <div key={spec.id} className="my-3">
+                    <h1 className="font-bold text-xl">{spec.heading}</h1>
+                    <p className="text-sm">{spec.description}</p>
                   </div>
                 );
               })}
             </div>
             <div className="text-white flex flex-col w-[140px] justify-evenly mx-4 lg:w-[170px]">
-              {ModelSPlaid2_Specs.map((ModelSPlaid2_Spec) => {
+              {data.plaidGroup2.map((spec) => {
                 return (
-                  <div key={ModelSPlaid2_Spec.id} className="my-3">
-                    <h1 className="font-bold text-xl">
-                      {ModelSPlaid2_Spec.heading}
-                    </h1>
-                    <p className="text-sm">{ModelSPlaid2_Spec.description}</p>
+                  <div key={spec.id} className="my-3">
+                    <h1 className="font-bold text-xl">{spec.heading}</h1>
+                    <p className="text-sm">{spec.description}</p>
                   </div>
                 );
               })}
@@ -75,25 +110,21 @@ const Specs = () => {
         {specs === 1 && (
           <div className="flex items-center justify-center">
             <div className="text-white flex flex-col w-[140px] justify-evenly mx-4 lg:w-[170px]">
-              {ModelS1_Specs.map((ModelS1_Spec) => {
+              {data.modelSGroup1.map((spec) => {
                 return (
-                  <div key={ModelS1_Spec.id} className="my-3">
-                    <h1 className="font-bold text-xl">
-                      {ModelS1_Spec.heading}
-                    </h1>
-                    <p className="text-sm">{ModelS1_Spec.description}</p>
+                  <div key={spec.id} className="my-3">
+                    <h1 className="font-bold text-xl">{spec.heading}</h1>
+                    <p className="text-sm">{spec.description}</p>
                   </div>
                 );
               })}
             </div>
             <div className="text-white flex flex-col w-[140px] justify-evenly mx-4 lg:w-[170px]">
-              {ModelS2_Specs.map((ModelS2_Spec) => {
+              {data.modelSGroup2.map((spec) => {
                 return (
-                  <div key={ModelS2_Spec.id} className="my-3">
-                    <h1 className="font-bold text-xl">
-                      {ModelS2_Spec.heading}
-                    </h1>
-                    <p className="text-sm">{ModelS2_Spec.description}</p>
+                  <div key={spec.id} className="my-3">
+                    <h1 className="font-bold text-xl">{spec.heading}</h1>
+                    <p className="text-sm">{spec.description}</p>
                   </div>
                 );
               })}

@@ -1,25 +1,89 @@
 "use client";
-import React, { useState, useMemo } from "react";
-import { Bannerinfos } from "@/constants/data";
+import React, { useState, useEffect } from "react";
 import VehicleCard from "@/components/modules/cards/VehicleCard";
+import SkeletonCard from "@/components/ui/SkeletonCard";
 import Navbar from "@/components/layout/Navbarbanner";
 
 const VehiclesClient = () => {
+  const [vehicles, setVehicles] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
   const categories = ["All", "Vehicles", "Energy", "Accessories"];
 
-  const filteredVehicles = useMemo(() => {
-    return Bannerinfos.filter((info) => {
-      const matchesCategory =
-        activeCategory === "All" || info.category === activeCategory;
-      const matchesSearch = info.title
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
-    });
+  useEffect(() => {
+    // Debounce search
+    const timer = setTimeout(() => {
+      const fetchVehicles = async () => {
+        setLoading(true);
+        try {
+          const params = new URLSearchParams();
+          if (activeCategory !== "All")
+            params.append("category", activeCategory);
+          if (searchQuery) params.append("search", searchQuery);
+
+          const res = await fetch(`/api/products?${params.toString()}`);
+          const data = await res.json();
+
+          // Transform API data to match component structure
+          const transformedData = data.map((item) => ({
+            ...item,
+            urlDesktop: item.url_desktop,
+            urlMobile: item.url_mobile,
+            specs: {
+              range: item.range_val,
+              topSpeed: item.top_speed,
+              acceleration: item.acceleration,
+              price: item.price,
+            },
+          }));
+
+          setVehicles(transformedData);
+        } catch (error) {
+          console.error("Failed to fetch vehicles:", error);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      fetchVehicles();
+    }, 300); // 300ms delay
+
+    return () => clearTimeout(timer);
   }, [activeCategory, searchQuery]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white text-gray-900">
+        <Navbar fixed={true} white={"true"} />
+        <div className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-16 max-w-[1440px] mx-auto">
+          {/* Header Skeleton */}
+          <div className="flex flex-col items-center mb-8 sm:mb-12">
+            <div className="h-8 sm:h-10 bg-gray-200 rounded w-48 mb-4 animate-pulse"></div>
+            <div className="h-4 sm:h-5 bg-gray-100 rounded w-64 animate-pulse"></div>
+          </div>
+
+          {/* Controls Skeleton */}
+          <div className="flex flex-col md:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12 items-stretch md:items-center justify-between animate-pulse">
+            <div className="flex gap-2">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="h-8 w-20 bg-gray-200 rounded-md"></div>
+              ))}
+            </div>
+            <div className="h-10 w-full md:w-80 bg-gray-200 rounded-lg"></div>
+          </div>
+
+          {/* Cards Grid Skeleton */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <SkeletonCard key={i} />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -77,9 +141,9 @@ const VehiclesClient = () => {
         </div>
 
         {/* Results Grid */}
-        {filteredVehicles.length > 0 ? (
+        {vehicles.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {filteredVehicles.map((info) => (
+            {vehicles.map((info) => (
               <VehicleCard
                 key={info.id}
                 title={info.title}
@@ -87,6 +151,7 @@ const VehiclesClient = () => {
                 imageUrl={info.urlDesktop}
                 dark={false}
                 specs={info.specs}
+                slug={info.slug}
               />
             ))}
           </div>
