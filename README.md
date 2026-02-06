@@ -57,6 +57,14 @@ The application follows a modern **Client-Server Architecture** using the Next.j
 - **State Management**: **Redux Toolkit** is used for managing global client-side state where necessary.
 - **Deployment**: Deployed on **Vercel**, taking advantage of their edge network and optimization features.
 
+## State Management
+
+The application uses **Redux Toolkit** to manage global client-side state.
+
+- **Store**: Configured in `src/store/index.js`.
+- **Slices**:
+  - **`uiSlice`**: Manages UI-related state, specifically the visibility of the side navigation menu (`isSideMenuOpen`). This allows for smooth toggling of the mobile/tablet sidebar from anywhere in the application.
+
 ## Low Level Design (LLD)
 
 ### Directory Structure
