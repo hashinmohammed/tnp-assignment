@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import PageBanner from "@/components/modules/banners/PageBanner";
 import { textVariant } from "@/constants/motion";
 import { motion } from "framer-motion";
@@ -12,24 +13,58 @@ import Infovideo from "@/components/modules/media/Infovideo";
 import Features from "@/components/modules/features/Features";
 import Specs from "@/components/modules/specs/Specs";
 import Ordernow from "@/components/modules/actions/Ordernow";
+import SkeletonModelX from "@/components/ui/SkeletonModelX";
 
 const ModelXClient = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/modelx");
+        if (response.ok) {
+          const result = await response.json();
+          setData(result);
+        }
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <SkeletonModelX />;
+  }
+
+  if (!data) {
+    return (
+      <div className="bg-tesla-dark h-screen flex items-center justify-center text-white">
+        Failed to load data.
+      </div>
+    );
+  }
+
   return (
     <div className="overflow-y-auto bg-tesla-dark">
       <PageBanner
-        title="Model X"
-        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770041186/model-x_d58hxe.jpg"
-        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770041182/model-x-mobile_fdxg6n.jpg"
-        description="Plaid"
-        infoheading1="333 mi"
-        infodescription1="Range (EPA est.)"
-        infoheading2="2.5s"
-        infodescription2="0-60 mph*"
-        infoheading3="9.9s"
-        infodescription3="1/4 Mile"
-        infoheading4="1,020 hp"
-        infodescription4="Peak Power"
-        white="false"
+        title={data.banner_title}
+        urlDesktop={data.banner_url_desktop}
+        urlMobile={data.banner_url_mobile}
+        description={data.banner_description}
+        infoheading1={data.banner_info_heading_1}
+        infodescription1={data.banner_info_desc_1}
+        infoheading2={data.banner_info_heading_2}
+        infodescription2={data.banner_info_desc_2}
+        infoheading3={data.banner_info_heading_3}
+        infodescription3={data.banner_info_desc_3}
+        infoheading4={data.banner_info_heading_4}
+        infodescription4={data.banner_info_desc_4}
+        white={data.banner_white}
       />
       <motion.div
         initial="hidden"
@@ -41,106 +76,106 @@ const ModelXClient = () => {
           variants={textVariant(1.6)}
           className="text-xl font-medium overflow-hidden sm:text-3xl lg:text-4xl"
         >
-          Interior of the Future
+          {data.section_heading}
         </motion.h1>
       </motion.div>
       <Photo
-        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg"
-        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770032622/interior-mobile_c2pm4m.jpg"
+        urlDesktop={data.photo_url_desktop}
+        urlMobile={data.photo_url_mobile}
       />
       <Video />
       <Carinfo
-        carinfoheading1="Stay Connected"
-        carinfodescription1="Instantly connect with multi-device Bluetooth, or fast charge devices with wireless and 36-watt USB-C charging."
-        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770041184/stay-connected_yz8l1p.jpg"
-        carinfoheading2="Sublime Sound"
-        carinfodescription2="A 22-speaker, 960-watt audio system with Active Road Noise Reduction offers the best listening experience wherever you are."
-        carinfourl2="https://res.cloudinary.com/doqeslffo/image/upload/v1770041180/sublime-sound_wrrsjf.jpg"
-        carinfoheading3="Room for Everything"
-        carinfodescription3="With front and rear trunks and fold-flat seats you can fit your bike without taking the wheel off—and your luggage too."
-        carinfourl3="https://res.cloudinary.com/doqeslffo/image/upload/v1770032611/room-for-everything_crfkps.jpg"
+        carinfoheading1={data.car_info_1_heading}
+        carinfodescription1={data.car_info_1_desc}
+        carinfourl1={data.car_info_1_url}
+        carinfoheading2={data.car_info_2_heading}
+        carinfodescription2={data.car_info_2_desc}
+        carinfourl2={data.car_info_2_url}
+        carinfoheading3={data.car_info_3_heading}
+        carinfodescription3={data.car_info_3_desc}
+        carinfourl3={data.car_info_3_url}
         video="false"
         reverse="false"
       />
       <Carinfobanner
-        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770041186/model-x-grey_m1wtyz.jpg"
-        infoheading1="1,020 hp"
-        infodescription1="Peak Power"
-        infoheading2="9.9s"
-        infodescription2="1/4 mile"
-        infoheading3="1.99 s"
-        infodescription3="0-60 mph*"
+        urlDesktop={data.car_info_banner_1_url}
+        infoheading1={data.car_info_banner_1_h1}
+        infodescription1={data.car_info_banner_1_d1}
+        infoheading2={data.car_info_banner_1_h2}
+        infodescription2={data.car_info_banner_1_d2}
+        infoheading3={data.car_info_banner_1_h3}
+        infodescription3={data.car_info_banner_1_d3}
       />
       <Beyond
-        Beyondheading="Beyond Ludicrous"
-        Beyondsemiheading="Plaid"
-        Beyonddescription="With the most power and quickest acceleration of any SUV, Model X Plaid is the highest performing SUV ever built. Updated battery architecture enables both Long Range and Plaid configurations to complete back-to-back track runs without performance degradation. Chat with a Tesla Advisor to learn more about Model X or schedule a demo drive today."
-        black="false"
+        Beyondheading={data.beyond_1_heading}
+        Beyondsemiheading={data.beyond_1_semi_heading}
+        Beyonddescription={data.beyond_1_description}
+        black={data.beyond_1_black}
       />
       <Electricpowertrain
-        url1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/model-s-battery_m3x5mi.jpg"
-        epheading1="Model X"
-        epdescription1="Dual Motor All-Wheel Drive platform has the longest range, and now delivers insane power and acceleration."
-        epstatheading11="3.8 s"
-        epstatheading12="348 mi"
-        epstatheading13="670 hp"
-        epstatdescription11="0-60 mph"
-        epstatdescription12="Range (EPA est.)"
-        epstatdescription13="Peak Power"
-        url2="https://res.cloudinary.com/doqeslffo/image/upload/v1770032616/model-s-plaid-battery_xgvsvr.jpg"
-        epheading2="Model X Plaid"
-        epdescription2="Tri Motor All-Wheel Drive platform with torque vectoring features three independent motors, each with a carbon-sleeved rotor that maintains 1,000+ horsepower all the way to top speed."
-        epstatheading21="2.5 s*"
-        epstatheading22="333 mi"
-        epstatheading23="1,020 hp"
-        epstatdescription21="0-60 mph"
-        epstatdescription22="Range (EPA est.)"
-        epstatdescription23="Peak Power"
+        url1={data.ep_url_1}
+        epheading1={data.ep_heading_1}
+        epdescription1={data.ep_desc_1}
+        epstatheading11={data.ep_stat_h11}
+        epstatheading12={data.ep_stat_h12}
+        epstatheading13={data.ep_stat_h13}
+        epstatdescription11={data.ep_stat_d11}
+        epstatdescription12={data.ep_stat_d12}
+        epstatdescription13={data.ep_stat_d13}
+        url2={data.ep_url_2}
+        epheading2={data.ep_heading_2}
+        epdescription2={data.ep_desc_2}
+        epstatheading21={data.ep_stat_h21}
+        epstatheading22={data.ep_stat_h22}
+        epstatheading23={data.ep_stat_h23}
+        epstatdescription21={data.ep_stat_d21}
+        epstatdescription22={data.ep_stat_d22}
+        epstatdescription23={data.ep_stat_d23}
       />
       <Infovideo
-        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770041190/even-more-capable_geaoqj.jpg"
-        semiheading="Utility"
-        heading="Even More Capable"
-        description="With ample storage and 5,000 lbs of towing capacity, Model X is built for maximum utility. Front doors open and close automatically, Falcon Wing rear doors allow for easier loading and a trailer hitch comes standard, so you can bring your gear with you wherever you go."
+        url={data.infovideo_1_url}
+        semiheading={data.infovideo_1_semi}
+        heading={data.infovideo_1_heading}
+        description={data.infovideo_1_desc}
         video="false"
         reverse="true"
       />
-      <Carinfobanner urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770041189/model-x-wave_tduiu7.jpg" />
+      <Carinfobanner urlDesktop={data.car_info_banner_2_url} />
       <Beyond
-        Beyondheading="Designed for Efficiency"
-        Beyondsemiheading="Exterior"
-        Beyonddescription="Model X has a drag coefficient of just .24 Cd, the lowest of any production SUV on the planet. Refined aerodynamic elements work together with new wheels and tires to help you travel farther, with sharper handling and better ride comfort."
-        black="true"
+        Beyondheading={data.beyond_2_heading}
+        Beyondsemiheading={data.beyond_2_semi_heading}
+        Beyonddescription={data.beyond_2_description}
+        black={data.beyond_2_black}
       />
       <Carinfo
-        carinfoheading1="Relentless Performance"
-        carinfodescription1="Staggered, performance wheels and tires keep the car planted and help transfer maximum power down to the road."
-        carinfourl1="https://res.cloudinary.com/doqeslffo/image/upload/v1770041181/relentless-performance_gnwcad.jpg"
-        carinfoheading2="Optimized Aerodynamics"
-        carinfodescription2="Attention to detail on all exterior surfaces makes Model X the most aerodynamic production car on Earth."
-        carinfourl2="https://res.cloudinary.com/doqeslffo/image/upload/v1770041183/optimized-aerodynamics_liqwtf.jpg"
-        carinfoheading3="Refined Styling"
-        carinfodescription3="Exterior design combines an iconic look with elegant details."
-        carinfourl3="https://res.cloudinary.com/doqeslffo/image/upload/v1770041181/refined-styling_jzeljv.jpg"
+        carinfoheading1={data.car_info_4_heading}
+        carinfodescription1={data.car_info_4_desc}
+        carinfourl1={data.car_info_4_url}
+        carinfoheading2={data.car_info_5_heading}
+        carinfodescription2={data.car_info_5_desc}
+        carinfourl2={data.car_info_5_url}
+        carinfoheading3={data.car_info_6_heading}
+        carinfodescription3={data.car_info_6_desc}
+        carinfourl3={data.car_info_6_url}
         video="false"
         reverse="true"
       />
       <Infovideo
-        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770041189/go-anywhere_wlj4xi.jpg"
-        semiheading="Range"
-        heading="Go Anywhere"
-        description="With up to 348 miles of estimated range and access to the world’s largest and most powerful fast charging network, you’ll spend less time plugged in and more time on the road. Chat with a Tesla Advisor to learn more about Model X or schedule a demo drive today."
+        url={data.infovideo_2_url}
+        semiheading={data.infovideo_2_semi}
+        heading={data.infovideo_2_heading}
+        description={data.infovideo_2_desc}
         video="false"
         reverse="false"
       />
       <Beyond
-        Beyondheading="Future of Driving"
-        Beyondsemiheading="Autopilot"
-        Beyonddescription="Autopilot enables your car to steer, accelerate and brake automatically within its lane under your active supervision, assisting with the most burdensome parts of driving. With over-the-air software updates, the latest enhancements are available instantly. Chat with a Tesla Advisor to learn more about Model X or schedule a demo drive today."
-        black="false"
+        Beyondheading={data.beyond_3_heading}
+        Beyondsemiheading={data.beyond_3_semi_heading}
+        Beyonddescription={data.beyond_3_description}
+        black={data.beyond_3_black}
       />
       <Features
-        url1="https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/model-s-battery_m3x5mi.jpg"
+        url1={data.ep_url_1}
         Featureheading="Features"
         Featuredescription="Enhanced Autopilot and Full Self-Driving capability introduce additional features and improve existing functionality to make your car more capable over time, including:"
         Feature1="Navigate on Autopilot"
@@ -154,9 +189,9 @@ const ModelXClient = () => {
       />
       <Specs />
       <Ordernow
-        Ordernowheading="Model S"
-        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770041182/modelx-ordernow_xvrzcl.jpg"
-        black="false"
+        Ordernowheading={data.order_now_heading}
+        url={data.order_now_url}
+        black={data.order_now_black}
       />
     </div>
   );
