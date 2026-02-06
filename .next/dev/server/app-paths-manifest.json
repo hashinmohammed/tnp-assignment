@@ -9,6 +9,5 @@
   "/page": "app/page.js",
   "/solarpanel/page": "app/solarpanel/page.js",
   "/solarroof/page": "app/solarroof/page.js",
-  "/vehicles/[slug]/page": "app/vehicles/[slug]/page.js",
-  "/vehicles/page": "app/vehicles/page.js"
+  "/vehicles/[slug]/page": "app/vehicles/[slug]/page.js"
 }
