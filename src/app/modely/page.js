@@ -1,10 +1,10 @@
-import PageBanner from "@/components/modules/PageBanner";
-import Infovideo from "@/components/modules/Infovideo";
-import Beyond from "@/components/modules/Beyond";
-import Image from "@/components/modules/Images";
-import Carinfobanner from "@/components/modules/Carinfobanner";
-import Specs from "@/components/modules/Specs";
-import Ordernow from "@/components/modules/Ordernow";
+import PageBanner from "@/components/modules/banners/PageBanner";
+import Infovideo from "@/components/modules/media/Infovideo";
+import Beyond from "@/components/modules/features/Beyond";
+import Image from "@/components/modules/media/Images";
+import Carinfobanner from "@/components/modules/banners/Carinfobanner";
+import Specs from "@/components/modules/specs/Specs";
+import Ordernow from "@/components/modules/actions/Ordernow";
 
 export const metadata = {
   title: "Model Y | Tesla",
@@ -15,8 +15,8 @@ const ModelY = () => {
     <div className="overflow-y-auto bg-black">
       <PageBanner
         title="Model Y"
-        urlDesktop="/modely/model-y.jpg"
-        urlMobile="/modely/model-y-mobile.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y_qaw0je.jpg"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y-mobile_rq1nxh.jpg"
         description="Schedule a Demo Drive"
         infoheading1="330 mi"
         infodescription1="Range (EPA est.)"
@@ -29,7 +29,7 @@ const ModelY = () => {
         white="true"
       />
       <Infovideo
-        url="/modely/structure.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/structure_zeey6l.jpg"
         semiheading="Safety"
         heading="Designed for Safety"
         description="Safety is the most important part of every Tesla. We design our vehicles to exceed safety standards"
@@ -44,7 +44,7 @@ const ModelY = () => {
       />
       <Image />
       <Carinfobanner
-        urlDesktop="/modely/model-y-red.jpg"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y-red_ex9mvk.jpg"
         infoheading1="2"
         infodescription1="Independent motors digitally control torque to the front and rear wheels"
         infoheading2="3.5 s"
@@ -59,7 +59,7 @@ const ModelY = () => {
         black="false"
       />
       <Infovideo
-        url="/modely/model-y.mp4"
+        url="https://res.cloudinary.com/doqeslffo/video/upload/v1770094552/model-y_axm7z8.mp4"
         semiheading="Range"
         heading="Go Anywhere"
         description="Model Y is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. "
@@ -73,7 +73,7 @@ const ModelY = () => {
         Beyonddescription="Autopilot's advanced safety and convenience features are designed to assist you with the most burdensome parts of driving."
         black="false"
       />
-      <Carinfobanner urlDesktop="/modely/model-y-interior.jpg" />
+      <Carinfobanner urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y-interior_fsmmlk.jpg" />
       <Beyond
         Beyondheading="Built Around the Driver"
         Beyondsemiheading="Interior"
@@ -83,7 +83,7 @@ const ModelY = () => {
       <Specs />
       <Ordernow
         Ordernowheading="Model S"
-        url="/modely/model-y-ordernow.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770094547/model-y-ordernow_qnsjpp.jpg"
         black="false"
       />
     </div>

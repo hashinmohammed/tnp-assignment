@@ -1,0 +1,62 @@
+"use client";
+import { useEffect } from "react";
+import Image from "next/image";
+import { useCarousel } from "@/hooks/useCarousel";
+
+const Video = () => {
+  const slides = [
+    {
+      url: "https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y-versatile_hbitsi.jpg",
+      heading: "Versatile Utility",
+    },
+    {
+      url: "https://res.cloudinary.com/doqeslffo/image/upload/v1770094546/model-y-room_lufm9k.jpg",
+      description: "Room for up to seven with optional third row",
+    },
+  ];
+
+  const { currentIndex, nextSlide, goToSlide } = useCarousel(slides.length);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      nextSlide();
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, [currentIndex, nextSlide]);
+
+  return (
+    <div className="w-[100vw] h-[100%] transition-all duration-700 bg-white">
+      <div className=" h-auto">
+        <div className="w-[90vw] h-[40vh] sm:h-[90vh] ml-[5vw] mt-[5vw] rounded-2xl bg-center overflow-hidden transition-all bg-cover object-cover duration-500 relative">
+          <Image
+            className={`object-cover w-full h-full transition-all duration-500 overflow-hidden`}
+            src={`${slides[currentIndex].url}`}
+            alt=""
+            fill
+            sizes="90vw"
+          />
+        </div>
+        <div className="flex top-8 mt-10 justify-start py-2 width-[100vw] ml-[5%] lg:ml-[25%]">
+          {slides.map((slide, slideIndex) => (
+            <div
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+              className="text-3xl cursor-pointer text-black flex text-start justify-start items-start"
+            >
+              <div
+                className={`${slideIndex === currentIndex ? "bg-black" : "bg-gray-200"} h-[14px] w-[14px] rounded-[50%] bottom-2 m-1`}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="text-black ml-[5%] mr-[2%] mb-[8%] lg:ml-[25%] lg:mr-[30%]">
+        <p className="text-sm font-normal">
+          {slides[currentIndex].description}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Video;

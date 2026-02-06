@@ -1,4 +1,4 @@
-import CybertruckClient from "./CybertruckClient";
+import CybertruckClient from "./_components/CybertruckClient";
 
 export const metadata = {
   title: "Cybertruck | Tesla",

@@ -28,3 +28,4 @@ PLEASE_DO_NOT_COMMIT_THIS_FILE.env
 
 # Vercel
 .vercel
+.next

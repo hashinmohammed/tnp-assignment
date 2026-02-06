@@ -6,9 +6,15 @@ export const Bannerinfos = [
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-y_eshqfe.jpg",
     urlMobile:
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028682/model-y-mobile_f3hu0j.jpg",
-    description: "Schedule a Demo Drive",
+    description: "Versatile Electric SUV Performance",
     underline: true,
     category: "Vehicles",
+    specs: {
+      range: "330 mi",
+      topSpeed: "135 mph",
+      acceleration: "3.5s",
+      price: "Starting at $43,990",
+    },
   },
   {
     id: "2",
@@ -17,9 +23,15 @@ export const Bannerinfos = [
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/model-3_yblr0i.jpg",
     urlMobile:
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/model-3-mobile_c0kza6.jpg",
-    description: "Schedule a Demo Drive",
+    description: "Affordable Electric Sedan Excellence",
     underline: true,
     category: "Vehicles",
+    specs: {
+      range: "358 mi",
+      topSpeed: "162 mph",
+      acceleration: "3.1s",
+      price: "Starting at $38,990",
+    },
   },
   {
     id: "3",
@@ -28,9 +40,15 @@ export const Bannerinfos = [
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s_ixzopm.jpg",
     urlMobile:
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s-mobile_qxpeas.jpg",
-    description: "Schedule a Demo Drive",
+    description: "Ultimate Performance Luxury Sedan",
     underline: true,
     category: "Vehicles",
+    specs: {
+      range: "405 mi",
+      topSpeed: "200 mph",
+      acceleration: "1.99s",
+      price: "Starting at $74,990",
+    },
   },
   {
     id: "4",
@@ -39,9 +57,15 @@ export const Bannerinfos = [
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028677/model-x_mvb2ge.jpg",
     urlMobile:
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028676/model-x-mobile_ns3mmm.jpg",
-    description: "Schedule a Demo Drive",
+    description: "Premium Electric SUV Experience",
     underline: true,
     category: "Vehicles",
+    specs: {
+      range: "348 mi",
+      topSpeed: "155 mph",
+      acceleration: "2.5s",
+      price: "Starting at $79,990",
+    },
   },
   {
     id: "5",
@@ -50,9 +74,15 @@ export const Bannerinfos = [
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg",
     urlMobile:
       "https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg",
-    description: "",
+    description: "Futuristic Electric Pickup Truck",
     underline: false,
     category: "Vehicles",
+    specs: {
+      range: "340 mi",
+      topSpeed: "112 mph",
+      acceleration: "2.6s",
+      price: "Starting at $60,990",
+    },
   },
   {
     id: "6",

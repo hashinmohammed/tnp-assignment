@@ -1,9 +1,9 @@
-import PageBanner from "@/components/modules/PageBanner";
-import Carinfobanner from "@/components/modules/Carinfobanner";
-import Beyond from "@/components/modules/Beyond";
-import Infovideo from "@/components/modules/Infovideo";
-import Installation from "@/components/modules/Installation";
-import Roofspecs from "@/components/modules/Roofspecs";
+import PageBanner from "@/components/modules/banners/PageBanner";
+import Carinfobanner from "@/components/modules/banners/Carinfobanner";
+import Beyond from "@/components/modules/features/Beyond";
+import Infovideo from "@/components/modules/media/Infovideo";
+import Installation from "@/components/modules/specs/Installation";
+import Roofspecs from "@/components/modules/specs/Roofspecs";
 
 export const metadata = {
   title: "Solar Roof | Tesla",
@@ -14,8 +14,8 @@ const Solarroof = () => {
     <div className="overflow-y-auto bg-black">
       <PageBanner
         title="Solar Roof"
-        urlDesktop="/solarroof/solarroof.webp"
-        urlMobile="/solarroof/solarroof-mobile.webp"
+        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770095197/solarroof_iwpywt.webp"
+        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770095198/solarroof-mobile_zx6njn.webp"
         description="Transform your roof and produce clean energy"
         infoheading1="Panel"
         infodescription1="Beautiful Solar"
@@ -27,7 +27,7 @@ const Solarroof = () => {
         infodescription4="Peak Power"
         white="true"
       />
-      <Carinfobanner urlDesktop="/solarroof/solarroofbanner.webp" />
+      <Carinfobanner urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770095201/solarroofbanner_pjq58w.webp" />
       <Beyond
         Beyondheading="Complement Your Home’s Aesthetic"
         Beyondsemiheading="Design"
@@ -35,7 +35,7 @@ const Solarroof = () => {
         black="false"
       />
       <Infovideo
-        url="/solarroof/energy-storage.webp"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770095201/energy-storage_ltp3wj.webp"
         semiheading="Energy Storage"
         heading="Protection Against Outages"
         description="Powerwall is a compact home battery that is bundled with Solar Roof, providing you with 24/7 energy security. It stores the energy you produce with Solar Roof so you can power your home anytime—at night or during an outage."
@@ -45,7 +45,7 @@ const Solarroof = () => {
         suppressHydrationWarning
       />
       <Infovideo
-        url="/solarroof/durability.webm"
+        url="https://res.cloudinary.com/doqeslffo/video/upload/v1770095202/durability_fr0jjr.webm"
         semiheading="Durability"
         heading="Take on the Elements"
         description="Solar Roof is comprised of both glass solar tiles and steel roofing tiles. Glass solar tiles produce energy, while architectural-grade steel tiles add longevity and corrosion resistance to your roof."
@@ -69,7 +69,7 @@ const Solarroof = () => {
         Feature3Description="Final cleanup is completed before system activation"
       />
       <Infovideo
-        url="/solarroof/solarproduction.jpg"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770095197/solarproduction_atxssj.jpg"
         semiheading="Efficiency"
         heading="Maximum Solar Production"
         description="Generate the most energy possible, even on roofs with complicated angles and intermittent sunlight. Glass solar tiles and architectural-grade steel tiles, vent covers and ridge caps come together to form a roof that is both durable and powerful."
@@ -78,7 +78,7 @@ const Solarroof = () => {
         FMR="false"
         suppressHydrationWarning
       />
-      <Carinfobanner urlDesktop="/solarroof/stock.jpg" />
+      <Carinfobanner urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770095195/stock_ipc0wi.jpg" />
       <Beyond
         Beyondheading="Monitor and Optimize"
         Beyondsemiheading="Control"
@@ -86,7 +86,7 @@ const Solarroof = () => {
         black="false"
       />
       <Infovideo
-        url="/solarroof/payless.webp"
+        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770095199/payless_lppkkf.webp"
         semiheading="Value"
         heading="Pay Less for Electricity"
         description="Solar Roof helps pay for itself with the energy it produces. As a fully integrated system, Solar Roof can maximize your solar generation and help you take control of your monthly electricity bill."
