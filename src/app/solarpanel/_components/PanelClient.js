@@ -1,21 +1,20 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import PageBanner from "@/components/modules/banners/PageBanner";
-import { textVariant } from "@/constants/motion";
-import { motion } from "framer-motion";
-import Beyond from "@/components/modules/features/Beyond";
+import Infovideo from "@/components/modules/media/Infovideo";
 import Carinfobanner from "@/components/modules/banners/Carinfobanner";
-import Ordernow from "@/components/modules/actions/Ordernow";
-import SkeletonCybertruck from "@/components/ui/SkeletonCybertruck";
+import Beyond from "@/components/modules/features/Beyond";
+import Roofspecs from "@/components/modules/specs/Roofspecs";
+import SkeletonSolarPanel from "@/components/ui/SkeletonSolarPanel";
 
-const CybertruckClient = () => {
+const PanelClient = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/cybertruck");
+        const response = await fetch("/api/solarpanel");
         if (response.ok) {
           const result = await response.json();
           setData(result);
@@ -31,7 +30,7 @@ const CybertruckClient = () => {
   }, []);
 
   if (loading) {
-    return <SkeletonCybertruck />;
+    return <SkeletonSolarPanel />;
   }
 
   if (!data) {
@@ -43,7 +42,7 @@ const CybertruckClient = () => {
   }
 
   return (
-    <div className="overflow-y-auto bg-tesla-dark">
+    <div className="overflow-y-auto bg-black">
       <PageBanner
         title={data.banner_title}
         urlDesktop={data.banner_url_desktop}
@@ -59,47 +58,37 @@ const CybertruckClient = () => {
         infodescription4={data.banner_info_desc_4}
         white={data.banner_white}
       />
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="h-[20vh] bg-black flex items-center justify-center overflow-hidden text-white"
-      >
-        <motion.h1
-          variants={textVariant(1.6)}
-          className="text-xl font-medium overflow-hidden sm:text-3xl lg:text-4xl"
-        >
-          {data.section_heading}
-        </motion.h1>
-      </motion.div>
-      <Carinfobanner
-        urlDesktop={data.car_info_url_desktop}
-        infoheading1={data.car_info_heading_1}
-        infodescription1={data.car_info_desc_1}
-        infoheading2={data.car_info_heading_2}
-        infodescription2={data.car_info_desc_2}
-        infoheading3={data.car_info_heading_3}
-        infodescription3={data.car_info_desc_3}
+      <Infovideo
+        url={data.infovideo_1_url}
+        semiheading={data.infovideo_1_semi}
+        heading={data.infovideo_1_heading}
+        description={data.infovideo_1_desc}
+        video="true"
+        reverse="true"
+        FMR="false"
+        suppressHydrationWarning
       />
+      <Carinfobanner urlDesktop={data.car_info_banner_1_url} />
       <Beyond
         Beyondheading={data.beyond_1_heading}
         Beyondsemiheading={data.beyond_1_semi_heading}
         Beyonddescription={data.beyond_1_description}
         black={data.beyond_1_black}
       />
-      <Beyond
-        Beyondheading={data.beyond_2_heading}
-        Beyondsemiheading={data.beyond_2_semi_heading}
-        Beyonddescription={data.beyond_2_description}
-        black={data.beyond_2_black}
+      <Infovideo
+        url={data.infovideo_2_url}
+        semiheading={data.infovideo_2_semi}
+        heading={data.infovideo_2_heading}
+        description={data.infovideo_2_desc}
+        video="false"
+        reverse="true"
+        FMR="false"
+        suppressHydrationWarning
       />
-      <Ordernow
-        Ordernowheading={data.order_now_heading}
-        url={data.order_now_url}
-        black={data.order_now_black}
-      />
+      <Carinfobanner urlDesktop={data.car_info_banner_2_url} />
+      <Roofspecs />
     </div>
   );
 };
 
-export default CybertruckClient;
+export default PanelClient;
