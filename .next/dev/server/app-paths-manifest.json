@@ -1,13 +1,8 @@
 {
+  "/api/cybertruck/route": "app/api/cybertruck/route.js",
   "/api/products/route": "app/api/products/route.js",
   "/api/specs/route": "app/api/specs/route.js",
   "/cybertruck/page": "app/cybertruck/page.js",
   "/model3/page": "app/model3/page.js",
-  "/models/page": "app/models/page.js",
-  "/modelx/page": "app/modelx/page.js",
-  "/modely/page": "app/modely/page.js",
-  "/page": "app/page.js",
-  "/solarpanel/page": "app/solarpanel/page.js",
-  "/solarroof/page": "app/solarroof/page.js",
-  "/vehicles/[slug]/page": "app/vehicles/[slug]/page.js"
+  "/page": "app/page.js"
 }

@@ -1,28 +1,63 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import PageBanner from "@/components/modules/banners/PageBanner";
 import { textVariant } from "@/constants/motion";
 import { motion } from "framer-motion";
 import Beyond from "@/components/modules/features/Beyond";
 import Carinfobanner from "@/components/modules/banners/Carinfobanner";
 import Ordernow from "@/components/modules/actions/Ordernow";
+import SkeletonCybertruck from "@/components/ui/SkeletonCybertruck";
 
 const CybertruckClient = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/cybertruck");
+        if (response.ok) {
+          const result = await response.json();
+          setData(result);
+        }
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <SkeletonCybertruck />;
+  }
+
+  if (!data) {
+    return (
+      <div className="bg-tesla-dark h-screen flex items-center justify-center text-white">
+        Failed to load data.
+      </div>
+    );
+  }
+
   return (
     <div className="overflow-y-auto bg-tesla-dark">
       <PageBanner
-        title="Cybertruck"
-        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770028690/cybertruck-landing_dtk5lr.jpg"
-        urlMobile="https://res.cloudinary.com/doqeslffo/image/upload/v1770028690/cybertruck-landing_dtk5lr.jpg"
-        description="Better Utility Than a Truck with More Performance Than a Sports Car"
-        infoheading1="340 mi"
-        infodescription1="Range (EPA est.)"
-        infoheading2="2.6s"
-        infodescription2="0-60 mph"
-        infoheading3="11,000 lbs"
-        infodescription3="Towing Capacity"
-        infoheading4="845 hp"
-        infodescription4="Peak Power"
-        white="false"
+        title={data.banner_title}
+        urlDesktop={data.banner_url_desktop}
+        urlMobile={data.banner_url_mobile}
+        description={data.banner_description}
+        infoheading1={data.banner_info_heading_1}
+        infodescription1={data.banner_info_desc_1}
+        infoheading2={data.banner_info_heading_2}
+        infodescription2={data.banner_info_desc_2}
+        infoheading3={data.banner_info_heading_3}
+        infodescription3={data.banner_info_desc_3}
+        infoheading4={data.banner_info_heading_4}
+        infodescription4={data.banner_info_desc_4}
+        white={data.banner_white}
       />
       <motion.div
         initial="hidden"
@@ -34,34 +69,34 @@ const CybertruckClient = () => {
           variants={textVariant(1.6)}
           className="text-xl font-medium overflow-hidden sm:text-3xl lg:text-4xl"
         >
-          Built for Any Planet
+          {data.section_heading}
         </motion.h1>
       </motion.div>
       <Carinfobanner
-        urlDesktop="https://res.cloudinary.com/doqeslffo/image/upload/v1770028683/cybertruck_ze1mff.jpg"
-        infoheading1="Shatter"
-        infodescription1="Resistant Glass"
-        infoheading2="Stainless"
-        infodescription2="Steel Exoskeleton"
-        infoheading3="Durable"
-        infodescription3="And rugged"
+        urlDesktop={data.car_info_url_desktop}
+        infoheading1={data.car_info_heading_1}
+        infodescription1={data.car_info_desc_1}
+        infoheading2={data.car_info_heading_2}
+        infodescription2={data.car_info_desc_2}
+        infoheading3={data.car_info_heading_3}
+        infodescription3={data.car_info_desc_3}
       />
       <Beyond
-        Beyondheading="Exoskeleton"
-        Beyondsemiheading="Safety"
-        Beyonddescription="Cybertruck is built with an exterior shell made for ultimate durability and passenger protection. Starting with a nearly impenetrable exoskeleton, every component is designed for superior strength and endurance, from Ultra-Hard 30X Cold-Rolled stainless-steel structural skin to Tesla armor glass."
-        black="true"
+        Beyondheading={data.beyond_1_heading}
+        Beyondsemiheading={data.beyond_1_semi_heading}
+        Beyonddescription={data.beyond_1_description}
+        black={data.beyond_1_black}
       />
       <Beyond
-        Beyondheading="Utility"
-        Beyondsemiheading="Versatile"
-        Beyonddescription="With up to 3,500 pounds of payload capacity and adjustable air suspension, Cybertruck is the most powerful tool we have ever built, engineered with 100 cubic feet of exterior, lockable storage — including a magic tonneau cover that is strong enough to stand on."
-        black="false"
+        Beyondheading={data.beyond_2_heading}
+        Beyondsemiheading={data.beyond_2_semi_heading}
+        Beyonddescription={data.beyond_2_description}
+        black={data.beyond_2_black}
       />
       <Ordernow
-        Ordernowheading="Cybertruck"
-        url="https://res.cloudinary.com/doqeslffo/image/upload/v1770028685/cybertruck-last_ahdv7s.jpg"
-        black="false"
+        Ordernowheading={data.order_now_heading}
+        url={data.order_now_url}
+        black={data.order_now_black}
       />
     </div>
   );
