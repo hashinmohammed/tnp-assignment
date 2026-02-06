@@ -15,5 +15,6 @@
   "/modely/page": "app/modely/page.js",
   "/page": "app/page.js",
   "/solarpanel/page": "app/solarpanel/page.js",
-  "/solarroof/page": "app/solarroof/page.js"
+  "/solarroof/page": "app/solarroof/page.js",
+  "/vehicles/page": "app/vehicles/page.js"
 }
