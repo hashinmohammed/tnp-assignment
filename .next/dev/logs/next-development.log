@@ -1,16 +1,7 @@
-[00:00:00.764] Server  LOG     ✓ Ready in 523ms
-[00:00:04.073] Server  LOG     ○ Compiling / ...
-[00:00:31.141] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:14.116] Server  LOG     ○ Compiling /_not-found/page ...
-[00:10:15.383] Server  LOG     ✓ Compiled in 4.4s
-[00:10:16.106] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:16.265] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:16.474] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032621/interior_x1udcr.jpg" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
-[01:45:03.197] Server  LOG     ✓ Compiled in 7.6s
-[01:45:06.377] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:45:06.390] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:45:06.394] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:45:07.522] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+[00:00:01.290] Server  LOG     ✓ Ready in 1023ms
+[00:00:04.358] Server  LOG     ○ Compiling /model3 ...
+[00:00:05.375] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.563] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -28,7 +19,7 @@ https://react.dev/link/hydration-mismatch
         <ReplaySsrOnlyErrors>
         <DevRootHTTPAccessFallbackBoundary>
           <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/cybertruck" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
               <RedirectBoundary>
                 <RedirectErrorBoundary router={{...}}>
                   <Head>
@@ -50,116 +41,6 @@ https://react.dev/link/hydration-mismatch
 -                                 <Suspense>
                   ...
 
-[01:45:07.522] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/model3" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <head>
-                          <body>
-                            <Providers>
-                              <Provider store={{...}}>
-                                <Layout>
-+                                 <main>
--                                 <Suspense>
-                  ...
-
-[01:45:08.096] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770028678/model-s_ixzopm.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:45:08.528] Browser WARN    Image with src "https://res.cloudinary.com/doqeslffo/image/upload/v1770032618/model-s-specs_wynrka.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:47:57.992] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:47:58.220] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:47:58.302] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:47:58.336] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:47:58.366] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:00.182] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:00.232] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:00.254] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:00.302] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:00.442] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:01.301] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:01.328] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:01.355] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:01.388] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:01.400] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:02.165] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.202] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.219] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.239] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.258] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:02.426] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.450] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.465] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.490] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.505] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:02.597] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.617] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.631] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.648] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.664] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:02.764] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.783] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.796] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.812] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.826] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:02.973] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:02.995] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.011] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.028] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.043] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:03.127] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.145] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.159] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.176] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.191] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:03.335] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.355] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.370] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.386] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:03.400] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:04.441] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.468] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.485] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.503] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.518] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:04.577] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.594] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.612] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.627] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.641] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:04.786] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.807] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.823] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.837] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.851] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
-[01:48:04.931] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.946] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.962] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.976] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/server/pages-manifest.json'
-[01:48:04.992] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/hashinmohammed/Desktop/tnp-assignment/.next/dev/routes-manifest.json'
+[00:00:05.612] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.631] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:23.320] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
