@@ -1,9 +1,9 @@
-import SolarRoofClient from "@/app/solarroof/_components/SolarRoofClient";
+import RoofClient from "@/app/solarroof/_components/RoofClient";
 
 export const metadata = {
   title: "Solar Roof | Tesla",
 };
 
 export default function Page() {
-  return <SolarRoofClient />;
+  return <RoofClient />;
 }

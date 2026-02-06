@@ -7,7 +7,7 @@ import Beyond from "@/components/modules/features/Beyond";
 import Roofspecs from "@/components/modules/specs/Roofspecs";
 import SkeletonSolarPanel from "@/components/ui/SkeletonSolarPanel";
 
-const SolarPanelClient = () => {
+const PanelClient = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -91,4 +91,4 @@ const SolarPanelClient = () => {
   );
 };
 
-export default SolarPanelClient;
+export default PanelClient;

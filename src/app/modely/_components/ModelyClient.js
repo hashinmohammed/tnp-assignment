@@ -9,7 +9,7 @@ import Specs from "@/components/modules/specs/Specs";
 import Ordernow from "@/components/modules/actions/Ordernow";
 import SkeletonModelY from "@/components/ui/SkeletonModelY";
 
-const ModelyClient = () => {
+const ModelYClient = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -122,4 +122,4 @@ const ModelyClient = () => {
   );
 };
 
-export default ModelyClient;
+export default ModelYClient;

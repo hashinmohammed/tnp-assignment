@@ -8,7 +8,7 @@ import Installation from "@/components/modules/specs/Installation";
 import Roofspecs from "@/components/modules/specs/Roofspecs";
 import SkeletonSolarRoof from "@/components/ui/SkeletonSolarRoof";
 
-const SolarRoofClient = () => {
+const RoofClient = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -132,4 +132,4 @@ const SolarRoofClient = () => {
   );
 };
 
-export default SolarRoofClient;
+export default RoofClient;
